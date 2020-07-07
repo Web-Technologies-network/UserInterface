@@ -33,6 +33,9 @@ module.exports = {
   ],
   // Core technology network rules
   rules: {
-
-  }
+    'no-param-reassign': 'error',
+    'no-unused-expressions': 'error',
+    //'react/jsx-max-props-per-line': 'error', this rule conflict with prettier need a solution ?
+  },
+  ignorePatterns: ['serviceWorker.ts']
 };
