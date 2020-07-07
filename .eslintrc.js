@@ -18,6 +18,12 @@ module.exports = {
       jsx: true // enable parsing of JSX
     }
   },
+  // add share settings to all rules
+  settings: {
+    react: {
+      version: 'detect' // automatically detect react version to use in the rules
+    }
+  },
   // we need to start with a base configuration and then tailor that by writing our own rules
   extends: [
     'plugin:react/recommended', // use recommended rules from plugin eslint react
