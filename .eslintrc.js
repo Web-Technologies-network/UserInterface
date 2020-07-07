@@ -28,6 +28,8 @@ module.exports = {
   extends: [
     'plugin:react/recommended', // use recommended rules from plugin eslint react
     'plugin:@typescript-eslint/recommended', // use recommended rules from typescript eslint plugin
+    'prettier/@typescript-eslint', // to disable eslint rules that may conflict with prettier
+    'plugin:prettier/recommended' // enable eslint plugin prettier to prettier error as eslint rules
   ],
   // Core technology network rules
   rules: {
