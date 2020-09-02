@@ -9,7 +9,7 @@ import CustomInput from '../../CustomInput/CustomInput';
 import Button from '../../CustomButtons/Button';
 import Card from '../../Card/Card';
 import CardHeader from '../../Card/CardHeader';
-import CardAvatar from '../../Card/CardAvatar';
+import { CardAvatar } from '../../Card/CardAvatar';
 import CardBody from '../../Card/CardBody';
 import CardFooter from '../../Card/CardFooter';
 

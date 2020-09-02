@@ -27,7 +27,7 @@ import CustomTabs from '../../CustomTabs/CustomTabs';
 import Danger from '../../Typography/Danger';
 import Card from '../../Card/Card';
 import CardHeader from '../../Card/CardHeader';
-import CardAvatar from '../../Card/CardAvatar';
+import { CardAvatar } from '../../Card/CardAvatar';
 import CardIcon from '../../Card/CardIcon';
 import CardBody from '../../Card/CardBody';
 import CardFooter from '../../Card/CardFooter';
