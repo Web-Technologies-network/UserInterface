@@ -1,26 +1,18 @@
 import React from 'react';
-// nodejs library that concatenates classes
 import classNames from 'classnames';
-// nodejs library to set properties for components
-import PropTypes from 'prop-types';
-// @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
-// @material-ui/icons
-// core components
 
 import styles from '../../../assets/jss/material-dashboard-react/components/cardAvatarStyle';
 
 const useStyles = makeStyles(styles);
 
-export default function CardAvatar(props: {
-  [x: string]: any;
-  children: any;
-  className: any;
-  plain: any;
-  profile: any;
-}) {
+export const CardAvatar: React.FC<{
+  children: React.ReactNode;
+  className: string;
+  profile: boolean;
+  plain: boolean;
+}> = ({ children, className, plain, profile, ...rest }) => {
   const classes = useStyles();
-  const { children, className, plain, profile, ...rest } = props;
   const cardAvatarClasses = classNames({
     [classes.cardAvatar]: true,
     [classes.cardAvatarProfile]: profile,
@@ -32,11 +24,4 @@ export default function CardAvatar(props: {
       {children}
     </div>
   );
-}
-
-CardAvatar.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  profile: PropTypes.bool,
-  plain: PropTypes.bool,
 };
