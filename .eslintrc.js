@@ -35,6 +35,7 @@ module.exports = {
   rules: {
     'no-param-reassign': 'error',
     'no-unused-expressions': 'error',
+    'react/prop-types': false
     //'react/jsx-max-props-per-line': 'error', this rule conflict with prettier need a solution ?
   },
   ignorePatterns: ['serviceWorker.ts']
