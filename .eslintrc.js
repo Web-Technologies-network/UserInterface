@@ -1,3 +1,4 @@
+const OFF = 0; const WARN = 1; const ERROR = 2;
 /**
  * A configuration object that configure Eslint core linting library
  * included as a dependency through react-scripts
@@ -35,7 +36,7 @@ module.exports = {
   rules: {
     'no-param-reassign': 'error',
     'no-unused-expressions': 'error',
-    'react/prop-types': false
+    'react/prop-types': OFF
     //'react/jsx-max-props-per-line': 'error', this rule conflict with prettier need a solution ?
   },
   ignorePatterns: ['serviceWorker.ts']
