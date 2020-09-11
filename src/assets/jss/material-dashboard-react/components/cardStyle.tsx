@@ -1,6 +1,7 @@
 import { blackColor, whiteColor, hexToRgb } from '../../material-dashboard-react';
+import { makeStyles } from '@material-ui/core/styles';
 
-const cardStyle = {
+export const createCardClasses = makeStyles({
   card: {
     border: '0',
     marginBottom: '30px',
@@ -31,6 +32,4 @@ const cardStyle = {
       paddingTop: '0px',
     },
   },
-};
-
-export default cardStyle;
+});
