@@ -7,8 +7,10 @@ import {
   dangerColor,
   grayColor,
 } from '../../material-dashboard-react';
+import { createStyles } from '@material-ui/core/styles';
 
-const typographyStyle = {
+export const typographyClasses = createStyles({
+  //@ts-ignore
   defaultFontStyle: {
     ...defaultFont,
     fontSize: '14px',
@@ -51,6 +53,4 @@ const typographyStyle = {
   dangerText: {
     color: dangerColor[0],
   },
-};
-
-export default typographyStyle;
+});
