@@ -23,7 +23,7 @@ import Table from '../../Table/Table';
 import Tasks from '../../Tasks/Tasks';
 import CustomTabs from '../../CustomTabs/CustomTabs';
 import Danger from '../../Typography/Danger';
-import Card from '../../Card/Card';
+import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import CardIcon from '../../Card/CardIcon';
 import CardBody from '../../Card/CardBody';

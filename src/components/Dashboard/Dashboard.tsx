@@ -6,7 +6,7 @@ import Sidebar from './Sidebar/Sidebar';
 import Navbar from './Navbars/Navbar';
 import routes from './routes';
 import logo from '../../assets/img/reactlogo.png';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import FixedPlugin from './FixedPlugin/FixedPlugin';
 import Footer from './Footer/Footer';
 

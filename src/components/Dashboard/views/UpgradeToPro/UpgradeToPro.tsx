@@ -10,7 +10,7 @@ import GridContainer from '../../Grid/GridContainer';
 import Danger from '../../Typography/Danger';
 import Success from '../../Typography/Success';
 import Button from '../../CustomButtons/Button';
-import Card from '../../Card/Card';
+import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
 

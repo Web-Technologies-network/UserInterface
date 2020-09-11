@@ -9,7 +9,7 @@ import Info from '../../Typography/Info';
 import Success from '../../Typography/Success';
 import Warning from '../../Typography/Warning';
 import Danger from '../../Typography/Danger';
-import Card from '../../Card/Card';
+import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
 

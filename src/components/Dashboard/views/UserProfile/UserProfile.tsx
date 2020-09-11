@@ -7,7 +7,7 @@ import GridItem from '../../Grid/GridItem';
 import GridContainer from '../../Grid/GridContainer';
 import CustomInput from '../../CustomInput/CustomInput';
 import Button from '../../CustomButtons/Button';
-import Card from '../../Card/Card';
+import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import { CardAvatar } from '../../Card/CardAvatar';
 import CardBody from '../../Card/CardBody';

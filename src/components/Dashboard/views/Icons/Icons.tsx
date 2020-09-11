@@ -6,7 +6,7 @@ import Hidden from "@material-ui/core/Hidden";
 // core components
 import GridItem from '../../Grid/GridItem';
 import GridContainer from '../../Grid/GridContainer';
-import Card from '../../Card/Card';
+import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
 

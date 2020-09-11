@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import GridItem from '../../Grid/GridItem';
 import GridContainer from '../../Grid/GridContainer';
 import Table from '../../Table/Table';
-import Card from '../../Card/Card';
+import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
 
