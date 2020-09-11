@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 // core components
-import styles from '../../../assets/jss/material-dashboard-react/components/typographyStyle';
-// @ts-ignore
-const useStyles = makeStyles(styles);
-// @ts-ignore
-export default function Quote(props) {
-  const classes = useStyles();
+import { typographyClasses as classes} from '../../../assets/jss/material-dashboard-react/components/typographyStyle';
+
+export default function Quote(props: { text: any; author: any }) {
   const { text, author } = props;
   return (
     <blockquote className={classes.defaultFontStyle + ' ' + classes.quote}>

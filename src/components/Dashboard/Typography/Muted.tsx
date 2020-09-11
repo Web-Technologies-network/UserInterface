@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 // core components
-import styles from '../../../assets/jss/material-dashboard-react/components/typographyStyle';
-// @ts-ignore
-const useStyles = makeStyles(styles);
-// @ts-ignore
-export default function Muted(props) {
-  const classes = useStyles();
+import { typographyClasses as classes} from '../../../assets/jss/material-dashboard-react/components/typographyStyle';
+
+export default function Muted(props: { children: any }) {
   const { children } = props;
   return <div className={classes.defaultFontStyle + ' ' + classes.mutedText}>{children}</div>;
 }

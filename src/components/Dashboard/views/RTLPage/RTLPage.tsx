@@ -24,7 +24,7 @@ import GridContainer from '../../Grid/GridContainer';
 import Table from '../../Table/Table';
 import Tasks from '../../Tasks/Tasks';
 import CustomTabs from '../../CustomTabs/CustomTabs';
-import Danger from '../../Typography/Danger';
+import { Danger } from '../../../common/Typography/Danger';
 import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import { CardAvatar } from '../../Card/CardAvatar';
