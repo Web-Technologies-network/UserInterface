@@ -7,7 +7,7 @@ import Muted from '../../Typography/Muted';
 import Primary from '../../Typography/Primary';
 import Info from '../../Typography/Info';
 import Success from '../../Typography/Success';
-import Warning from '../../Typography/Warning';
+import { Warning } from '../../../common/Typography/Warning';
 import { Danger } from '../../../common/Typography/Danger';
 import { Card } from '../../../common';
 import CardHeader from '../../Card/CardHeader';
