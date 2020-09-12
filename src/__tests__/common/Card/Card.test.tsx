@@ -19,14 +19,6 @@ describe('Card:', () => {
       </Card>,
     );
     //assert
-    expect(tree.toJSON()).toMatchInlineSnapshot(`
-      <div
-        className="MuiGrid-root makeStyles-card-1 makeStyles-cardChart-4 null"
-      >
-        <div>
-          Test children
-        </div>
-      </div>
-    `);
+    expect(tree.toJSON()).toMatchSnapshot();
   });
 });

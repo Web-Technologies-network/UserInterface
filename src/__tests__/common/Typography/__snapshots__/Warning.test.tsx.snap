@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Warning should render the same 1`] = `
+<div
+  className="MuiGrid-root [object Object] [object Object]"
+>
+  <div>
+    test children
+  </div>
+</div>
+`;
