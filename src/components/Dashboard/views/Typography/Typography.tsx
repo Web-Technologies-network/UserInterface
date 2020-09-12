@@ -6,7 +6,7 @@ import Quote from '../../Typography/Quote';
 import Muted from '../../Typography/Muted';
 import Primary from '../../Typography/Primary';
 import Info from '../../Typography/Info';
-import Success from '../../Typography/Success';
+import { Success } from '../../../common/Typography/Success';
 import { Card, Danger, Warning } from '../../../common';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
