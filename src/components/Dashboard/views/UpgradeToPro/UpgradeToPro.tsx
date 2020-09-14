@@ -7,8 +7,7 @@ import Check from '@material-ui/icons/Check';
 // core components
 import GridItem from '../../Grid/GridItem';
 import GridContainer from '../../Grid/GridContainer';
-import { Danger } from '../../../common/Typography/Danger';
-import { Success } from '../../../common/index';
+import { Danger, Success } from '../../../common/index';
 import Button from '../../CustomButtons/Button';
 import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
