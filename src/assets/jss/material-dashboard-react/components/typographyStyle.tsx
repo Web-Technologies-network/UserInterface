@@ -7,12 +7,13 @@ import {
   dangerColor,
   grayColor,
 } from '../../material-dashboard-react';
-import { createStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-export const typographyClasses = createStyles({
-  //@ts-ignore
+export const createTypographyStyle = makeStyles((theme) => ({
   defaultFontStyle: {
-    ...defaultFont,
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    lineHeight: '1.5em',
+    fontWeight: 'inherit',
     fontSize: '14px',
   },
   defaultHeaderMargins: {
@@ -53,4 +54,4 @@ export const typographyClasses = createStyles({
   dangerText: {
     color: dangerColor[0],
   },
-});
+}));
