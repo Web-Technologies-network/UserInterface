@@ -2,7 +2,7 @@
 
 exports[`Warning should render the same 1`] = `
 <div
-  className="MuiGrid-root [object Object] [object Object]"
+  className="MuiGrid-root makeStyles-defaultFontStyle-1 makeStyles-warningText-10"
 >
   <div>
     test children
