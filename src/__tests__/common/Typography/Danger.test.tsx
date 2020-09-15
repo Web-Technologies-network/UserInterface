@@ -36,14 +36,6 @@ describe('Danger', () => {
         <div>test children</div>
       </Danger>,
     );
-    expect(tree.toJSON()).toMatchInlineSnapshot(`
-      <div
-        className="MuiGrid-root [object Object] [object Object]"
-      >
-        <div>
-          test children
-        </div>
-      </div>
-    `);
+    expect(tree.toJSON()).toMatchSnapshot();
   });
 });
