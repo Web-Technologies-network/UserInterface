@@ -5,12 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 // core components
 import { createTypographyStyle } from '../../../assets/jss/material-dashboard-react/components/typographyStyle';
 
-export default function Primary(props: { children: any }) {
+export default function Success(props: { children: any }) {
   const { children } = props;
-  const classes = createTypographyStyle();
-  return <div className={classes.defaultFontStyle + ' ' + classes.primaryText}>{children}</div>;
+  const { defaultFontStyle, successText } = createTypographyStyle();
+  return <div className={defaultFontStyle + ' ' + successText}>{children}</div>;
 }
 
-Primary.propTypes = {
+Success.propTypes = {
   children: PropTypes.node,
 };
