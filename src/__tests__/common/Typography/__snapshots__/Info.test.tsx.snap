@@ -2,7 +2,7 @@
 
 exports[`Info should render the same 1`] = `
 <div
-  className="MuiGrid-root [object Object] [object Object]"
+  className="MuiGrid-root makeStyles-defaultFontStyle-1 makeStyles-infoText-8"
 >
   <div>
     test children

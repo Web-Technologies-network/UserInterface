@@ -2,7 +2,7 @@
 
 exports[`Success should render the same 1`] = `
 <div
-  className="MuiGrid-root [object Object] [object Object]"
+  className="MuiGrid-root makeStyles-defaultFontStyle-1 makeStyles-successText-9"
 >
   <div>
     test children
