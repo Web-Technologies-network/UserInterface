@@ -11,7 +11,8 @@ jobs:
           command: yarn run test
           name: Run YARN tests
       - run:
-        command: yarn run lint
+          command: yarn run lint
+          name: Run YARN lint
 orbs:
   node: circleci/node@4.0.0
 version: 2.1
