@@ -3,32 +3,19 @@ import { useStyles } from './dashboardStyles';
 import bgImage from '../../assets/img/sidebar-2.jpg';
 import PerfectScrollbar from 'perfect-scrollbar';
 import Sidebar from './Sidebar/Sidebar';
-import Navbar from './Navbars/Navbar';
 import routes from './routes';
 import logo from '../../assets/img/reactlogo.png';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import FixedPlugin from './FixedPlugin/FixedPlugin';
-import Footer from './Footer/Footer';
+import { MainPanel } from './MainPanel';
 
 let ps: { destroy: () => void };
 
-const switchRoutes = (
-  <Switch>
-    {routes.map((prop, key) => {
-      if (prop.layout === '/admin') {
-        return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
-      }
-      return null;
-    })}
-    <Redirect from='/admin' to='/admin/dashboard' />
-  </Switch>
-);
 
 export const Dashboard: React.FC = ({ ...rest }) => {
+  //const MainPanelRef = React.createRef<MainRef>();
   // styles
   const classes = useStyles();
   // ref to help us initialize PerfectScrollbar on windows devices
-  const mainPanel = React.createRef();
+  const mainPanel = React.createRef<MainPanel>();
   // states and functions
   const [image, setImage] = React.useState(bgImage);
   const [color, setColor] = React.useState('blue');
@@ -90,27 +77,20 @@ export const Dashboard: React.FC = ({ ...rest }) => {
         color={color}
         {...rest}
       />
-      //@ts-ignore
-      <div className={classes.mainPanel} ref={mainPanel}>
-        <Navbar routes={routes} handleDrawerToggle={handleDrawerToggle} {...rest} />
-        {/* On the /maps route we want the map to be on full screen - this is not possible if the content and conatiner classes are present because they have some paddings which would make the map smaller */}
-        {getRoute() ? (
-          <div className={classes.content}>
-            <div className={classes.container}>{switchRoutes}</div>
-          </div>
-        ) : (
-          <div className={classes.map}>{switchRoutes}</div>
-        )}
-        {getRoute() ? <Footer /> : null}
-        <FixedPlugin
-          handleImageClick={handleImageClick}
-          handleColorClick={handleColorClick}
-          bgColor={color}
-          bgImage={image}
-          handleFixedClick={handleFixedClick}
-          fixedClasses={fixedClasses}
-        />
-      </div>
+      <MainPanel
+       ref={mainPanel}
+       classes={classes}
+       handleDrawerToggle={handleDrawerToggle}
+       getRoute={getRoute}
+       handleImageClick={handleImageClick}
+       handleColorClick={handleColorClick}
+       handleFixedClick={handleFixedClick}
+       fixedClasses={fixedClasses}
+       color={color}
+       image={image}>
+        {rest}
+      </MainPanel>
     </div>
   );
 };
+
