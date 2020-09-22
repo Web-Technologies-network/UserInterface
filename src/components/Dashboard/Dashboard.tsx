@@ -48,9 +48,7 @@ export const Dashboard: React.FC = ({ ...rest }) => {
   // initialize and destroy the PerfectScrollbar plugin
   React.useEffect(() => {
     if (navigator.platform.indexOf('Win') > -1) {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-      // @ts-ignore
-      ps = new PerfectScrollbar(mainPanel.current, {
+      ps = new PerfectScrollbar(mainPanel.current as unknown as Element, {
         suppressScrollX: true,
         suppressScrollY: false,
       });
