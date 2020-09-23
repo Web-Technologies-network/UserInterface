@@ -8,14 +8,14 @@ import GridContainer from '../../Grid/GridContainer';
 import CustomInput from '../../CustomInput/CustomInput';
 import Button from '../../CustomButtons/Button';
 import { Card } from '../../../common/Card/Card';
-import CardHeader from '../../Card/CardHeader';
+import CardHeader  from '../../Card/CardHeader';
 import { CardAvatar } from '../../Card/CardAvatar';
 import CardBody from '../../Card/CardBody';
 import CardFooter from '../../Card/CardFooter';
-
+import { colors } from '../../../../assets/jss/Colors';
 import avatar from '../../../../assets/img/faces/marc.jpg';
 
-const styles = {
+const useStyles = makeStyles((theme) => ({
   cardCategoryWhite: {
     color: 'rgba(255,255,255,.62)',
     margin: '0',
@@ -27,33 +27,32 @@ const styles = {
     color: '#FFFFFF',
     marginTop: '0px',
     minHeight: 'auto',
-    fontWeight: '300',
+    fontWeight: 'bold',
     fontFamily: "'Roboto', 'Helvetica', 'Arial', sans-serif",
     marginBottom: '3px',
     textDecoration: 'none',
   },
-};
-// @ts-ignore
-const useStyles = makeStyles(styles);
+  description: {
+  
+  },
+  cardTitle: {
+  
+  },
+}));
 
 export default function UserProfile() {
   const classes = useStyles();
   return (
     <div>
       <GridContainer>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={8}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color='primary'>
+            <CardHeader color={colors.primary}>
               <h4 className={classes.cardTitleWhite}>Edit Profile</h4>
               <p className={classes.cardCategoryWhite}>Complete your profile</p>
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <GridContainer>
-                // @ts-ignore
                 <GridItem xs={12} sm={12} md={5}>
                   <CustomInput
                     labelText='Company (disabled)'
@@ -66,7 +65,6 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-                // @ts-ignore
                 <GridItem xs={12} sm={12} md={3}>
                   <CustomInput
                     labelText='Username'
@@ -76,7 +74,6 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-                // @ts-ignore
                 <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText='Email address'
@@ -88,7 +85,6 @@ export default function UserProfile() {
                 </GridItem>
               </GridContainer>
               <GridContainer>
-                // @ts-ignore
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
                     labelText='First Name'
@@ -98,7 +94,6 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-                // @ts-ignore
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
                     labelText='Last Name'
@@ -110,7 +105,6 @@ export default function UserProfile() {
                 </GridItem>
               </GridContainer>
               <GridContainer>
-                // @ts-ignore
                 <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText='City'
@@ -120,7 +114,6 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-                // @ts-ignore
                 <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText='Country'
@@ -130,7 +123,6 @@ export default function UserProfile() {
                     }}
                   />
                 </GridItem>
-                // @ts-ignore
                 <GridItem xs={12} sm={12} md={4}>
                   <CustomInput
                     labelText='Postal Code'
@@ -142,7 +134,6 @@ export default function UserProfile() {
                 </GridItem>
               </GridContainer>
               <GridContainer>
-                // @ts-ignore
                 <GridItem xs={12} sm={12} md={12}>
                   <InputLabel style={{ color: '#AAAAAA' }}>About me</InputLabel>
                   <CustomInput
@@ -159,10 +150,8 @@ export default function UserProfile() {
                 </GridItem>
               </GridContainer>
             </CardBody>
-            // @ts-ignore
             <CardFooter>
-              // @ts-ignore
-              <Button color='primary'>Update Profile</Button>
+              <Button color={colors.primary}>Update Profile</Button>
             </CardFooter>
           </Card>
         </GridItem>
@@ -178,7 +167,7 @@ export default function UserProfile() {
             </CardAvatar>
             // @ts-ignore
             <CardBody profile>
-              <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
+              <h6 className={classes.cardCategoryWhite}>CEO / CO-FOUNDER</h6>
               <h4 className={classes.cardTitle}>Alec Thompson</h4>
               <p className={classes.description}>
                 Don{"'"}t be scared of the truth because we need to restart the human foundation in truth And I love you

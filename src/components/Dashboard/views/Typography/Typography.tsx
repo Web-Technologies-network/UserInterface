@@ -51,7 +51,7 @@ const useStyles = makeStyles(styles);
 export default function TypographyPage() {
   const classes = useStyles();
   return (
-   // @ts-ignore
+    // @ts-ignore
     <Card>
       // @ts-ignore
       <CardHeader color='primary'>

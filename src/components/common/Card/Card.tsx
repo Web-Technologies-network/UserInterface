@@ -5,11 +5,11 @@ import { Grid } from '@material-ui/core';
 
 export const Card: React.FC<{
   [x: string]: any;
-  className: any;
+  className?: any;
   children: any;
-  plain: any;
-  profile: any;
-  chart: any;
+  plain?: any;
+  profile?: any;
+  chart?: any;
 }> = ({ className, children, plain, profile, chart, ...rest }) => {
   const classes = createCardClasses();
   const cardClasses = classNames({

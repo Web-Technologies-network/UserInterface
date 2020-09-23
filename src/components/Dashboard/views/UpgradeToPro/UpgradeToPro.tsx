@@ -12,6 +12,7 @@ import Button from '../../CustomButtons/Button';
 import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
+import { colors } from '../../../../assets/jss/Colors';
 
 const styles = {
   cardCategoryWhite: {
@@ -85,14 +86,14 @@ const useStyles = makeStyles(styles);
 export default function UpgradeToPro() {
   const classes = useStyles();
   return (
-   // @ts-ignore
+    // @ts-ignore
     <GridContainer justify='center'>
       // @ts-ignore
       <GridItem xs={12} sm={12} md={8}>
         // @ts-ignore
         <Card>
           // @ts-ignore
-          <CardHeader color='info'>
+          <CardHeader color={colors.info}>
             <h4 className={classes.cardTitleWhite}>Material Dashboard PRO React</h4>
             <p className={classes.cardCategoryWhite}>
               Are you looking for more components? Please check our Premium Version of Material Dashboard Angular.
@@ -194,7 +195,7 @@ export default function UpgradeToPro() {
                       // @ts-ignore
                       <Button
                         round
-                        color='danger'
+                        color={colors.danger}
                         href='https://www.creative-tim.com/product/material-dashboard-pro-react?ref=mdr-upgrade-live'
                       >
                         Upgrade to Pro

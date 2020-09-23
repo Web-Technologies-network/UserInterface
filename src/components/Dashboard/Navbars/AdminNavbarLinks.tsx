@@ -20,6 +20,7 @@ import CustomInput from '../CustomInput/CustomInput';
 import Button from '../CustomButtons/Button';
 
 import styles from '../../../assets/jss/material-dashboard-react/components/headerLinksStyle';
+import { colors } from '../../../assets/jss/Colors';
 
 // @ts-ignore
 const useStyles = makeStyles(styles);
@@ -67,13 +68,13 @@ export default function AdminNavbarLinks() {
           }}
         />
         // @ts-ignore
-        <Button color='white' aria-label='edit' justIcon round>
+        <Button color={colors.white} aria-label='edit' justIcon round>
           <Search />
         </Button>
       </div>
       // @ts-ignore
       <Button
-        color={window.innerWidth > 959 ? 'transparent' : 'white'}
+        color={window.innerWidth > 959 ? colors.transparent : colors.white}
         justIcon={window.innerWidth > 959}
         simple={!(window.innerWidth > 959)}
         aria-label='Dashboard'
@@ -87,7 +88,7 @@ export default function AdminNavbarLinks() {
       <div className={classes.manager}>
         // @ts-ignore
         <Button
-          color={window.innerWidth > 959 ? 'transparent' : 'white'}
+          color={window.innerWidth > 959 ? colors.transparent : colors.white}
           justIcon={window.innerWidth > 959}
           simple={!(window.innerWidth > 959)}
           aria-owns={openNotification ? 'notification-menu-list-grow' : null}
@@ -147,7 +148,7 @@ export default function AdminNavbarLinks() {
       <div className={classes.manager}>
         // @ts-ignore
         <Button
-          color={window.innerWidth > 959 ? 'transparent' : 'white'}
+          color={window.innerWidth > 959 ? colors.transparent : colors.white}
           justIcon={window.innerWidth > 959}
           simple={!(window.innerWidth > 959)}
           aria-owns={openProfile ? 'profile-menu-list-grow' : null}

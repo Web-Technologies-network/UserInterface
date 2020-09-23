@@ -15,6 +15,7 @@ import Snackbar from '../../Snackbar/Snackbar';
 import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
+import { colors } from "../../../../assets/jss/Colors";
 
 const styles = {
   cardCategoryWhite: {
@@ -126,7 +127,7 @@ export default function Notifications() {
    // @ts-ignore
     <Card>
       // @ts-ignore
-      <CardHeader color="primary">
+      <CardHeader color={colors.primary}>
         <h4 className={classes.cardTitleWhite}>Notifications</h4>
         <p className={classes.cardCategoryWhite}>
           Handcrafted by our friends from{" "}
@@ -239,7 +240,7 @@ export default function Notifications() {
                 // @ts-ignore
                 <Button
                   fullWidth
-                  color="primary"
+                  color={colors.primary}
                   onClick={() => showNotification("tl")}
                 >
                   Top Left
@@ -259,7 +260,7 @@ export default function Notifications() {
                 // @ts-ignore
                 <Button
                   fullWidth
-                  color="primary"
+                  color={colors.primary}
                   onClick={() => showNotification("tc")}
                 >
                   Top Center
@@ -279,7 +280,7 @@ export default function Notifications() {
                 // @ts-ignore
                 <Button
                   fullWidth
-                  color="primary"
+                  color={colors.primary}
                   onClick={() => showNotification("tr")}
                 >
                   Top Right
@@ -307,7 +308,7 @@ export default function Notifications() {
                 // @ts-ignore
                 <Button
                   fullWidth
-                  color="primary"
+                  color={colors.primary}
                   onClick={() => showNotification("bl")}
                 >
                   Bottom Left
@@ -327,7 +328,7 @@ export default function Notifications() {
                 // @ts-ignore
                 <Button
                   fullWidth
-                  color="primary"
+                  color={colors.primary}
                   onClick={() => showNotification("bc")}
                 >
                   Bottom Center
@@ -347,7 +348,7 @@ export default function Notifications() {
                 // @ts-ignore
                 <Button
                   fullWidth
-                  color="primary"
+                  color={colors.primary}
                   onClick={() => showNotification("br")}
                 >
                   Bottom Right

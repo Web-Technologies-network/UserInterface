@@ -69,12 +69,16 @@ const CustomSkinMap = withScriptjs(
 );
 
 export default function Maps() {
-  return (<div/>
-    // <CustomSkinMap
-    //   googleMapURL='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE'
-    //   loadingElement={<div style={{ height: `100%` }} />}
-    //   containerElement={<div style={{ height: `100vh` }} />}
-    //   mapElement={<div style={{ height: `100%` }} />}
-    // />
+  return (
+    <CustomSkinMap
+      // @ts-ignore
+      googleMapURL='https://maps.googleapis.com/maps/api/js?AIzaSyDG9KYhOew8J3_5Yn9L48k_1XAiK3ZF1Js'
+      // @ts-ignore
+      loadingElement={<div style={{ height: `100%` }} />}
+      // @ts-ignore
+      containerElement={<div style={{ height: `100vh` }} />}
+      // @ts-ignore
+      mapElement={<div style={{ height: `100%` }} />}
+    />
   );
 }

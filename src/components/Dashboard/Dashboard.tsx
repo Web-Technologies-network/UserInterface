@@ -9,7 +9,6 @@ import { MainPanel } from './MainPanel';
 
 let ps: { destroy: () => void };
 
-
 export const Dashboard: React.FC = ({ ...rest }) => {
   //const MainPanelRef = React.createRef<MainRef>();
   // styles
@@ -48,7 +47,7 @@ export const Dashboard: React.FC = ({ ...rest }) => {
   // initialize and destroy the PerfectScrollbar plugin
   React.useEffect(() => {
     if (navigator.platform.indexOf('Win') > -1) {
-      ps = new PerfectScrollbar(mainPanel.current as unknown as Element, {
+      ps = new PerfectScrollbar((mainPanel.current as unknown) as Element, {
         suppressScrollX: true,
         suppressScrollY: false,
       });
@@ -76,19 +75,19 @@ export const Dashboard: React.FC = ({ ...rest }) => {
         {...rest}
       />
       <MainPanel
-       ref={mainPanel}
-       classes={classes}
-       handleDrawerToggle={handleDrawerToggle}
-       getRoute={getRoute}
-       handleImageClick={handleImageClick}
-       handleColorClick={handleColorClick}
-       handleFixedClick={handleFixedClick}
-       fixedClasses={fixedClasses}
-       color={color}
-       image={image}>
+        ref={mainPanel}
+        classes={classes}
+        handleDrawerToggle={handleDrawerToggle}
+        getRoute={getRoute}
+        handleImageClick={handleImageClick}
+        handleColorClick={handleColorClick}
+        handleFixedClick={handleFixedClick}
+        fixedClasses={fixedClasses}
+        color={color}
+        image={image}
+      >
         {rest}
       </MainPanel>
     </div>
   );
 };
-

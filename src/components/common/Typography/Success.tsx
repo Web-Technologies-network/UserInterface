@@ -3,8 +3,6 @@ import { createTypographyStyle } from '../../../assets/jss/material-dashboard-re
 import { Grid } from '@material-ui/core';
 
 export const Success: React.FC<{ children: React.ReactNode }> = ({ children }) => {
- const classes = createTypographyStyle();
- return (
-  <Grid className={classes.defaultFontStyle + ' ' + classes.successText}>{children}</Grid>
- );
-}
+  const classes = createTypographyStyle();
+  return <Grid className={classes.defaultFontStyle + ' ' + classes.successText}>{children}</Grid>;
+};

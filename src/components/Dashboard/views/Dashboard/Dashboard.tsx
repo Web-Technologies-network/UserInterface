@@ -147,7 +147,7 @@ export default function Dashboard() {
                 className='ct-chart'
                 data={dailySalesChart.data}
                 type='Line'
-               // @ts-ignore
+                // @ts-ignore
                 options={dailySalesChart.options}
                 listener={dailySalesChart.animation}
               />
@@ -181,7 +181,7 @@ export default function Dashboard() {
                 className='ct-chart'
                 data={emailsSubscriptionChart.data}
                 type='Bar'
-               // @ts-ignore
+                // @ts-ignore
                 options={emailsSubscriptionChart.options}
                 responsiveOptions={emailsSubscriptionChart.responsiveOptions}
                 listener={emailsSubscriptionChart.animation}
@@ -210,7 +210,7 @@ export default function Dashboard() {
                 className='ct-chart'
                 data={completedTasksChart.data}
                 type='Line'
-               // @ts-ignore
+                // @ts-ignore
                 options={completedTasksChart.options}
                 listener={completedTasksChart.animation}
               />

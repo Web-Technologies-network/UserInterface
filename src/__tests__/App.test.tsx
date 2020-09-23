@@ -12,27 +12,22 @@ describe('Dashboard render and navigation test suite', () => {
     const inMemHistory = createMemoryHistory();
     // act
     const { findByText } = render(
-     <Router history={inMemHistory}>
-      <Dashboard />
-     </Router>
-     );
+      <Router history={inMemHistory}>
+        <Dashboard />
+      </Router>,
+    );
     expect(findByText(/Dashboard/));
-    expect(findByText(/User Profile/))
+    expect(findByText(/User Profile/));
   });
-  test('render the same', () => {
-  
-  });
-//  // prepare
-//  const inMemHistory = createMemoryHistory();
-// // act
-//  act(() => {
-//   const tree = create(<Router history={inMemHistory}>
-//    <Dashboard />
-//   </Router>)
-//  });
-//
-//  //  // expect(tree.toJSON()).toMatchSnapshot();
-
+  test('render the same', () => {});
+  //  // prepare
+  //  const inMemHistory = createMemoryHistory();
+  // // act
+  //  act(() => {
+  //   const tree = create(<Router history={inMemHistory}>
+  //    <Dashboard />
+  //   </Router>)
+  //  });
+  //
+  //  //  // expect(tree.toJSON()).toMatchSnapshot();
 });
-
-

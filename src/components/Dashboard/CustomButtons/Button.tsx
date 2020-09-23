@@ -1,44 +1,40 @@
 import React from 'react';
-// nodejs library that concatenates classes
 import classNames from 'classnames';
-// nodejs library to set properties for components
-import PropTypes from 'prop-types';
-
-// material-ui components
-import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { colors } from '../../../assets/jss/Colors';
 
-import styles from '../../../assets/jss/material-dashboard-react/components/buttonStyle';
+import { createButtonStyles } from '../../../assets/jss/material-dashboard-react/components/buttonStyle';
 
-// @ts-ignore
-const useStyles = makeStyles(styles);
-
+enum sizes {'sm', 'lg'}
 export default function RegularButton(props: {
-  [x: string]: any;
-  color: any;
-  round: any;
-  children: any;
-  disabled: any;
-  simple: any;
-  size: any;
-  block: any;
-  link: any;
-  justIcon: any;
-  className: any;
-  muiClasses: any;
+  color: colors;
+  round?: boolean;
+  children?: React.ReactNode;
+  disabled?: boolean;
+  simple?: boolean;
+  size?: sizes;
+  block?: boolean;
+  link?: boolean;
+  justIcon?: boolean;
+  className?: string;
+  muiClasses?: object;
+  href?: string;
+  target?: string;
+  fullWidth?:boolean;
+  onClick?: (event: any) => void;
 }) {
-  const classes = useStyles();
+  const classes = createButtonStyles();
   const {
     color,
     round,
     children,
     disabled,
     simple,
-    size,
+    size = sizes.sm,
     block,
     link,
     justIcon,
-    className,
+    className = '',
     muiClasses,
     ...rest
   } = props;
@@ -60,18 +56,3 @@ export default function RegularButton(props: {
     </Button>
   );
 }
-
-RegularButton.propTypes = {
-  color: PropTypes.oneOf(['primary', 'info', 'success', 'warning', 'danger', 'rose', 'white', 'transparent']),
-  size: PropTypes.oneOf(['sm', 'lg']),
-  simple: PropTypes.bool,
-  round: PropTypes.bool,
-  disabled: PropTypes.bool,
-  block: PropTypes.bool,
-  link: PropTypes.bool,
-  justIcon: PropTypes.bool,
-  className: PropTypes.string,
-  // use this to pass the classes props from Material-UI
-  muiClasses: PropTypes.object,
-  children: PropTypes.node,
-};

@@ -46,7 +46,7 @@ export default function Snackbar(props) {
           <span className={messageClasses}>{message}</span>
         </div>
       }
-     // @ts-ignore
+      // @ts-ignore
       action={action}
       ContentProps={{
         classes: {

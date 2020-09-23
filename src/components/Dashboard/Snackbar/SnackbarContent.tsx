@@ -40,7 +40,7 @@ export default function SnackbarContent(props) {
         message: classes.message,
         action: classNames({ [classes.actionRTL]: rtlActive }),
       }}
-     // @ts-ignore
+      // @ts-ignore
       action={action}
     />
   );

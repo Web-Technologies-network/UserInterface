@@ -11,6 +11,7 @@ import imagine3 from '../../../assets/img/sidebar-3.jpg';
 import imagine4 from '../../../assets/img/sidebar-4.jpg';
 
 import Button from '../CustomButtons/Button';
+import { colors } from "../../../assets/jss/Colors";
 
 // @ts-ignore
 export default function FixedPlugin(props) {
@@ -143,7 +144,7 @@ export default function FixedPlugin(props) {
             <div className="button-container">
               // @ts-ignore
               <Button
-                color="success"
+                color={colors.success}
                 href="https://www.creative-tim.com/product/material-dashboard-react?ref=mdr-fixed-plugin"
                 target="_blank"
                 fullWidth
@@ -156,7 +157,7 @@ export default function FixedPlugin(props) {
             <div className="button-container">
               // @ts-ignore
               <Button
-                color="warning"
+                color={colors.warning}
                 href="https://www.creative-tim.com/product/material-dashboard-pro-react?ref=mdr-fixed-plugin"
                 target="_blank"
                 fullWidth
@@ -168,7 +169,7 @@ export default function FixedPlugin(props) {
           <li className="button-container">
             // @ts-ignore
             <Button
-              color="info"
+              color={colors.info}
               fullWidth
               href="https://demos.creative-tim.com/material-dashboard-react/#/documentation/tutorial?ref=mdr-fixed-plugin"
               target="_blank"
