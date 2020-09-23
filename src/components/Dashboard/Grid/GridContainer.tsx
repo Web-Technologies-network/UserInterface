@@ -10,7 +10,7 @@ const styles = {
 };
 
 const useStyles = makeStyles(styles);
-interface GridContainerProp {
+type GridContainerProp = {
   children: React.ReactNode;
 }
 export default function GridContainer(props: GridContainerProp) {

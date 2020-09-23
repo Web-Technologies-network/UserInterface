@@ -159,7 +159,6 @@ export default function UserProfile() {
         <GridItem xs={12} sm={12} md={4}>
           // @ts-ignore
           <Card profile>
-            // @ts-ignore
             <CardAvatar profile>
               <a href='#pablo' onClick={(e) => e.preventDefault()}>
                 <img src={avatar} alt='...' />

@@ -7,16 +7,16 @@ const useStyles = makeStyles(styles);
 
 export const CardAvatar: React.FC<{
   children: React.ReactNode;
-  className: string;
-  profile: boolean;
-  plain: boolean;
-}> = ({ children, className, plain, profile, ...rest }) => {
+  className?: string;
+  profile?: boolean;
+  plain?: boolean;
+}> = ({ children, className = '', plain, profile, ...rest }) => {
   const classes = useStyles();
   const cardAvatarClasses = classNames({
     [classes.cardAvatar]: true,
     [classes.cardAvatarProfile]: profile,
     [classes.cardAvatarPlain]: plain,
-    [className]: className !== undefined,
+    [className]: className !== '',
   });
   return (
     <div className={cardAvatarClasses} {...rest}>

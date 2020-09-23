@@ -142,7 +142,6 @@ export default function FixedPlugin(props) {
 
           <li className="button-container">
             <div className="button-container">
-              // @ts-ignore
               <Button
                 color={colors.success}
                 href="https://www.creative-tim.com/product/material-dashboard-react?ref=mdr-fixed-plugin"
@@ -155,7 +154,6 @@ export default function FixedPlugin(props) {
           </li>
           <li className="button-container">
             <div className="button-container">
-              // @ts-ignore
               <Button
                 color={colors.warning}
                 href="https://www.creative-tim.com/product/material-dashboard-pro-react?ref=mdr-fixed-plugin"
@@ -167,7 +165,6 @@ export default function FixedPlugin(props) {
             </div>
           </li>
           <li className="button-container">
-            // @ts-ignore
             <Button
               color={colors.info}
               fullWidth
