@@ -10,7 +10,7 @@ import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
 import { colors } from '../../../../assets/jss/Colors';
 
-const styles : { [key: string]: any } = {
+const styles: { [key: string]: any } = {
   cardCategoryWhite: {
     '&,& a,& a:hover,& a:focus': {
       color: 'rgba(255,255,255,.62)',

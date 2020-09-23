@@ -10,7 +10,7 @@ import {
 } from '../../material-dashboard-react';
 import { Theme, makeStyles } from '@material-ui/core';
 
-const styles = (theme: Theme) : { [key: string]: any } => ({
+const styles = (theme: Theme): { [key: string]: any } => ({
   warningTableHeader: {
     color: warningColor[0],
   },

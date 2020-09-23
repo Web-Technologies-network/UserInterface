@@ -17,7 +17,7 @@ type CustomTableProp = {
   tableHead: string[];
   tableData: string[][];
   tableHeaderColor: colors;
-}
+};
 export default function CustomTable(props: CustomTableProp) {
   const classes = createTableClasses();
   const { tableHead, tableData, tableHeaderColor } = props;
