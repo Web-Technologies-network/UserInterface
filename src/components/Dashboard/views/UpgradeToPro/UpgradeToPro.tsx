@@ -1,6 +1,6 @@
 import React from 'react';
 // @material-ui/core components
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 // @material-ui/icons
 import Close from '@material-ui/icons/Close';
 import Check from '@material-ui/icons/Check';
@@ -14,7 +14,7 @@ import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
 import { colors } from '../../../../assets/jss/Colors';
 
-const styles = {
+const styles: { [key: string]: any } = {
   cardCategoryWhite: {
     '&,& a,& a:hover,& a:focus': {
       color: 'rgba(255,255,255,.62)',
@@ -80,26 +80,20 @@ const styles = {
     textAlign: 'center',
   },
 };
-// @ts-ignore
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles((theme: Theme) => styles);
 
 export default function UpgradeToPro() {
   const classes = useStyles();
   return (
-    // @ts-ignore
     <GridContainer justify='center'>
-      // @ts-ignore
       <GridItem xs={12} sm={12} md={8}>
-        // @ts-ignore
         <Card>
-          // @ts-ignore
           <CardHeader color={colors.info}>
             <h4 className={classes.cardTitleWhite}>Material Dashboard PRO React</h4>
             <p className={classes.cardCategoryWhite}>
               Are you looking for more components? Please check our Premium Version of Material Dashboard Angular.
             </p>
           </CardHeader>
-          // @ts-ignore
           <CardBody>
             <div className={classes.tableUpgradeWrapper}>
               <table className={classes.table}>
@@ -186,13 +180,11 @@ export default function UpgradeToPro() {
                   <tr>
                     <td />
                     <td className={classes.center}>
-                      // @ts-ignore
                       <Button round disabled>
                         Current Version
                       </Button>
                     </td>
                     <td className={classes.center}>
-                      // @ts-ignore
                       <Button
                         round
                         color={colors.danger}

@@ -8,9 +8,9 @@ import {
   grayColor,
   defaultFont,
 } from '../../material-dashboard-react';
-import { Theme } from '@material-ui/core';
+import { Theme, makeStyles } from '@material-ui/core';
 
-export const tableStyle = (theme: Theme) => ({
+const styles = (theme: Theme) : { [key: string]: any } => ({
   warningTableHeader: {
     color: warningColor[0],
   },
@@ -74,3 +74,4 @@ export const tableStyle = (theme: Theme) => ({
     verticalAlign: 'middle',
   },
 });
+export const createTableClasses = makeStyles((theme: Theme) => styles(theme));

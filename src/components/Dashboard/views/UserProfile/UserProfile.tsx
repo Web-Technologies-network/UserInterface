@@ -151,16 +151,13 @@ export default function UserProfile() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={4}>
-          // @ts-ignore
           <Card profile>
             <CardAvatar profile>
               <a href='#pablo' onClick={(e) => e.preventDefault()}>
                 <img src={avatar} alt='...' />
               </a>
             </CardAvatar>
-            // @ts-ignore
             <CardBody profile>
               <h6 className={classes.cardCategoryWhite}>CEO / CO-FOUNDER</h6>
               <h4 className={classes.cardTitle}>Alec Thompson</h4>
@@ -168,8 +165,7 @@ export default function UserProfile() {
                 Don{"'"}t be scared of the truth because we need to restart the human foundation in truth And I love you
                 like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
               </p>
-              // @ts-ignore
-              <Button color='primary' round>
+              <Button color={colors.primary} round>
                 Follow
               </Button>
             </CardBody>

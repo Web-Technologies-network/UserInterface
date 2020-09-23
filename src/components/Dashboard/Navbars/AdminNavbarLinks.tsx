@@ -146,7 +146,6 @@ export default function AdminNavbarLinks() {
         </Poppers>
       </div>
       <div className={classes.manager}>
-        // @ts-ignore
         <Button
           color={window.innerWidth > 959 ? colors.transparent : colors.white}
           justIcon={window.innerWidth > 959}

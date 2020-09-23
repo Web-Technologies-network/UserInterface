@@ -33,6 +33,7 @@ import { bugs, website, server } from '../../variables/general';
 import { dailySalesChart, emailsSubscriptionChart, completedTasksChart } from '../../variables/charts';
 
 import styles from '../../../../assets/jss/material-dashboard-react/views/dashboardStyle';
+import { colors } from '../../../../assets/jss/Colors';
 // @ts-ignore
 const useStyles = makeStyles(styles);
 
@@ -41,14 +42,10 @@ export default function Dashboard() {
   return (
     <div>
       <GridContainer>
-        // @ts-ignore
         <GridItem xs={12} sm={6} md={3}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color='warning' stats icon>
-              // @ts-ignore
-              <CardIcon color='warning'>
+            <CardHeader color={colors.warning} stats icon>
+              <CardIcon color={colors.warning}>
                 <Icon>content_copy</Icon>
               </CardIcon>
               <p className={classes.cardCategory}>Used Space</p>
@@ -56,7 +53,6 @@ export default function Dashboard() {
                 49/50 <small>GB</small>
               </h3>
             </CardHeader>
-            // @ts-ignore
             <CardFooter stats>
               <div className={classes.stats}>
                 <Danger>
@@ -69,20 +65,15 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={6} md={3}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color='success' stats icon>
-              // @ts-ignore
-              <CardIcon color='success'>
+            <CardHeader color={colors.success} stats icon>
+              <CardIcon color={colors.success}>
                 <Store />
               </CardIcon>
               <p className={classes.cardCategory}>Revenue</p>
               <h3 className={classes.cardTitle}>$34,245</h3>
             </CardHeader>
-            // @ts-ignore
             <CardFooter stats>
               <div className={classes.stats}>
                 <DateRange />
@@ -91,20 +82,15 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={6} md={3}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color='danger' stats icon>
-              // @ts-ignore
-              <CardIcon color='danger'>
+            <CardHeader color={colors.danger} stats icon>
+              <CardIcon color={colors.danger}>
                 <Icon>info_outline</Icon>
               </CardIcon>
               <p className={classes.cardCategory}>Fixed Issues</p>
               <h3 className={classes.cardTitle}>75</h3>
             </CardHeader>
-            // @ts-ignore
             <CardFooter stats>
               <div className={classes.stats}>
                 <LocalOffer />
@@ -113,20 +99,15 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={6} md={3}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color='info' stats icon>
-              // @ts-ignore
-              <CardIcon color='info'>
+            <CardHeader color={colors.info} stats icon>
+              <CardIcon color={colors.info}>
                 <Accessibility />
               </CardIcon>
               <p className={classes.cardCategory}>Followers</p>
               <h3 className={classes.cardTitle}>+245</h3>
             </CardHeader>
-            // @ts-ignore
             <CardFooter stats>
               <div className={classes.stats}>
                 <Update />
@@ -137,22 +118,18 @@ export default function Dashboard() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={4}>
-          // @ts-ignore
           <Card chart>
-            // @ts-ignore
-            <CardHeader color='success'>
+            <CardHeader color={colors.success}>
               <ChartistGraph
                 className='ct-chart'
                 data={dailySalesChart.data}
                 type='Line'
-                // @ts-ignore
+               // @ts-ignore
                 options={dailySalesChart.options}
                 listener={dailySalesChart.animation}
               />
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <h4 className={classes.cardTitle}>Daily Sales</h4>
               <p className={classes.cardCategory}>
@@ -162,7 +139,6 @@ export default function Dashboard() {
                 increase in today sales.
               </p>
             </CardBody>
-            // @ts-ignore
             <CardFooter chart>
               <div className={classes.stats}>
                 <AccessTime /> updated 4 minutes ago
@@ -170,29 +146,23 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={4}>
-          // @ts-ignore
           <Card chart>
-            // @ts-ignore
-            <CardHeader color='warning'>
-              // @ts-ignore
+            <CardHeader color={colors.warning}>
               <ChartistGraph
                 className='ct-chart'
                 data={emailsSubscriptionChart.data}
                 type='Bar'
-                // @ts-ignore
+               // @ts-ignore
                 options={emailsSubscriptionChart.options}
                 responsiveOptions={emailsSubscriptionChart.responsiveOptions}
                 listener={emailsSubscriptionChart.animation}
               />
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <h4 className={classes.cardTitle}>Email Subscriptions</h4>
               <p className={classes.cardCategory}>Last Campaign Performance</p>
             </CardBody>
-            // @ts-ignore
             <CardFooter chart>
               <div className={classes.stats}>
                 <AccessTime /> campaign sent 2 days ago
@@ -200,27 +170,22 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={4}>
-          // @ts-ignore
           <Card chart>
-            // @ts-ignore
-            <CardHeader color='danger'>
+            <CardHeader color={colors.danger}>
               <ChartistGraph
                 className='ct-chart'
                 data={completedTasksChart.data}
                 type='Line'
-                // @ts-ignore
+               // @ts-ignore
                 options={completedTasksChart.options}
                 listener={completedTasksChart.animation}
               />
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <h4 className={classes.cardTitle}>Completed Tasks</h4>
               <p className={classes.cardCategory}>Last Campaign Performance</p>
             </CardBody>
-            // @ts-ignore
             <CardFooter chart>
               <div className={classes.stats}>
                 <AccessTime /> campaign sent 2 days ago
@@ -230,7 +195,6 @@ export default function Dashboard() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={6}>
           <CustomTabs
             title='Tasks:'
@@ -254,20 +218,15 @@ export default function Dashboard() {
             ]}
           />
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={6}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color='warning'>
-              // @ts-ignore
+            <CardHeader color={colors.warning}>
               <h4 className={classes.cardTitleWhite}>Employees Stats</h4>
               <p className={classes.cardCategoryWhite}>New employees on 15th September, 2016</p>
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <Table
-                tableHeaderColor='warning'
+                tableHeaderColor={colors.warning}
                 tableHead={['ID', 'Name', 'Salary', 'Country']}
                 tableData={[
                   // @ts-ignore

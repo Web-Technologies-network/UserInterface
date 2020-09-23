@@ -1,6 +1,6 @@
 import React from 'react';
 // @material-ui/core components
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 // core components
 import GridItem from '../../Grid/GridItem';
 import GridContainer from '../../Grid/GridContainer';
@@ -8,8 +8,9 @@ import Table from '../../Table/Table';
 import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
+import { colors } from '../../../../assets/jss/Colors';
 
-const styles = {
+const styles : { [key: string]: any } = {
   cardCategoryWhite: {
     '&,& a,& a:hover,& a:focus': {
       color: 'rgba(255,255,255,.62)',
@@ -38,39 +39,29 @@ const styles = {
     },
   },
 };
-// @ts-ignore
-const useStyles = makeStyles(styles);
+
+const useStyles = makeStyles((theme: Theme) => styles);
 
 export default function TableList() {
   const classes = useStyles();
   return (
     <GridContainer>
-      // @ts-ignore
       <GridItem xs={12} sm={12} md={12}>
-        // @ts-ignore
         <Card>
-          // @ts-ignore
-          <CardHeader color='primary'>
+          <CardHeader color={colors.primary}>
             <h4 className={classes.cardTitleWhite}>Simple Table</h4>
             <p className={classes.cardCategoryWhite}>Here is a subtitle for this table</p>
           </CardHeader>
-          // @ts-ignore
           <CardBody>
             <Table
-              tableHeaderColor='primary'
+              tableHeaderColor={colors.primary}
               tableHead={['Name', 'Country', 'City', 'Salary']}
               tableData={[
-                // @ts-ignore
                 ['Dakota Rice', 'Niger', 'Oud-Turnhout', '$36,738'],
-                // @ts-ignore
                 ['Minerva Hooper', 'Curaçao', 'Sinaai-Waas', '$23,789'],
-                // @ts-ignore
                 ['Sage Rodriguez', 'Netherlands', 'Baileux', '$56,142'],
-                // @ts-ignore
                 ['Philip Chaney', 'Korea, South', 'Overland Park', '$38,735'],
-                // @ts-ignore
                 ['Doris Greene', 'Malawi', 'Feldkirchen in Kärnten', '$63,542'],
-                // @ts-ignore
                 ['Mason Porter', 'Chile', 'Gloucester', '$78,615'],
               ]}
             />
@@ -82,14 +73,14 @@ export default function TableList() {
         // @ts-ignore
         <Card plain>
           // @ts-ignore
-          <CardHeader plain color='primary'>
+          <CardHeader plain color={colors.primary}>
             <h4 className={classes.cardTitleWhite}>Table on Plain Background</h4>
             <p className={classes.cardCategoryWhite}>Here is a subtitle for this table</p>
           </CardHeader>
           // @ts-ignore
           <CardBody>
             <Table
-              tableHeaderColor='primary'
+              tableHeaderColor={colors.primary}
               tableHead={['ID', 'Name', 'Country', 'City', 'Salary']}
               tableData={[
                 // @ts-ignore

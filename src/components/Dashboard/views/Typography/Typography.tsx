@@ -1,6 +1,6 @@
 import React from 'react';
 // @material-ui/core components
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 // core components
 import Quote from '../../Typography/Quote';
 import Muted from '../../Typography/Muted';
@@ -8,8 +8,9 @@ import Primary from '../../Typography/Primary';
 import { Card, Danger, Info, Success, Warning } from '../../../common';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
+import { colors } from '../../../../assets/jss/Colors';
 
-const styles = {
+const styles: { [key: string]: any } = {
   typo: {
     paddingLeft: '25%',
     marginBottom: '40px',
@@ -45,20 +46,16 @@ const styles = {
     textDecoration: 'none',
   },
 };
-// @ts-ignore
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles((theme: Theme) => styles);
 
 export default function TypographyPage() {
   const classes = useStyles();
   return (
-    // @ts-ignore
     <Card>
-      // @ts-ignore
-      <CardHeader color='primary'>
+      <CardHeader color={colors.primary}>
         <h4 className={classes.cardTitleWhite}>Material Dashboard Heading</h4>
         <p className={classes.cardCategoryWhite}>Created using Roboto Font Family</p>
       </CardHeader>
-      // @ts-ignore
       <CardBody>
         <div className={classes.typo}>
           <div className={classes.note}>Header 1</div>

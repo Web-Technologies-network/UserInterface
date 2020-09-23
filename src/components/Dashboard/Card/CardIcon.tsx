@@ -9,18 +9,17 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // core components
 import styles from '../../../assets/jss/material-dashboard-react/components/cardIconStyle';
+import { colors } from '../../../assets/jss/Colors';
 
 const useStyles = makeStyles(styles);
 
-export default function CardIcon(props: { [x: string]: any; className: any; children: any; color: any }) {
+export default function CardIcon(props: { className?: string; children: React.ReactElement; color: colors }) {
   const classes = useStyles();
-  const { className, children, color, ...rest } = props;
+  const { className = '', children, color, ...rest } = props;
   const cardIconClasses = classNames({
     [classes.cardIcon]: true,
-    // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
-    // @ts-ignore
     [classes[color + 'CardHeader']]: color,
-    [className]: className !== undefined,
+    [className]: className !== '',
   });
   return (
     <div className={cardIconClasses} {...rest}>

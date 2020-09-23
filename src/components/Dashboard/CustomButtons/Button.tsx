@@ -10,7 +10,7 @@ enum sizes {
   'lg',
 }
 export default function RegularButton(props: {
-  color: colors;
+  color?: colors;
   round?: boolean;
   children?: React.ReactNode;
   disabled?: boolean;
@@ -28,7 +28,7 @@ export default function RegularButton(props: {
 }) {
   const classes = createButtonStyles();
   const {
-    color,
+    color = colors.primary,
     round,
     children,
     disabled,

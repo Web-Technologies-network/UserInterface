@@ -42,6 +42,7 @@ import {
 import styles from '../../../../assets/jss/material-dashboard-react/views/rtlStyle';
 
 import avatar from '.././.././../../assets/img/faces/marc.jpg';
+import { colors } from "../../../../assets/jss/Colors";
 
 let bugs = [
   "طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن؟",
@@ -66,14 +67,10 @@ export default function RTLPage() {
   return (
     <div>
       <GridContainer>
-        // @ts-ignore
         <GridItem xs={12} sm={6} md={3}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color="warning" stats icon>
-              // @ts-ignore
-              <CardIcon color="warning">
+            <CardHeader color={colors.warning} stats icon>
+              <CardIcon color={colors.warning}>
                 <Icon>content_copy</Icon>
               </CardIcon>
               <p className={classes.cardCategory}>فضا مصرف شده</p>
@@ -81,7 +78,6 @@ export default function RTLPage() {
                 49/50 <small>GB</small>
               </h3>
             </CardHeader>
-            // @ts-ignore
             <CardFooter stats>
               <div className={classes.stats}>
                 <Danger>
@@ -94,20 +90,15 @@ export default function RTLPage() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={6} md={3}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color="success" stats icon>
-              // @ts-ignore
-              <CardIcon color="success">
+            <CardHeader color={colors.success} stats icon>
+              <CardIcon color={colors.success}>
                 <Store />
               </CardIcon>
               <p className={classes.cardCategory}>سود</p>
               <h3 className={classes.cardTitle}>$34,245</h3>
             </CardHeader>
-            // @ts-ignore
             <CardFooter stats>
               <div className={classes.stats}>
                 <DateRange />
@@ -116,20 +107,15 @@ export default function RTLPage() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={6} md={3}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color="danger" stats icon>
-              // @ts-ignore
-              <CardIcon color="danger">
+            <CardHeader color={colors.danger} stats icon>
+              <CardIcon color={colors.danger}>
                 <Icon>info_outline</Icon>
               </CardIcon>
               <p className={classes.cardCategory}>مشکلات حل شده</p>
               <h3 className={classes.cardTitle}>75</h3>
             </CardHeader>
-            // @ts-ignore
             <CardFooter stats>
               <div className={classes.stats}>
                 <LocalOffer />
@@ -138,20 +124,15 @@ export default function RTLPage() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={6} md={3}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color="info" stats icon>
-              // @ts-ignore
-              <CardIcon color="info">
+            <CardHeader color={colors.info} stats icon>
+              <CardIcon color={colors.info}>
                 <Accessibility />
               </CardIcon>
               <p className={classes.cardCategory}>دنبال‌کننده</p>
               <h3 className={classes.cardTitle}>+245</h3>
             </CardHeader>
-            // @ts-ignore
             <CardFooter stats>
               <div className={classes.stats}>
                 <Update />
@@ -162,12 +143,9 @@ export default function RTLPage() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={4}>
-          // @ts-ignore
           <Card chart>
-            // @ts-ignore
-            <CardHeader color="success">
+            <CardHeader color={colors.success}>
               <ChartistGraph
                 className="ct-chart"
                 data={dailySalesChart.data}
@@ -177,7 +155,6 @@ export default function RTLPage() {
                 listener={dailySalesChart.animation}
               />
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <h4 className={classes.cardTitle}>فروش روزانه</h4>
               <p className={classes.cardCategory}>
@@ -187,7 +164,6 @@ export default function RTLPage() {
                 رشد در فروش امروز.
               </p>
             </CardBody>
-            // @ts-ignore
             <CardFooter chart>
               <div className={classes.stats}>
                 <AccessTime /> ۴ دقیقه پیش
@@ -197,10 +173,8 @@ export default function RTLPage() {
         </GridItem>
         // @ts-ignore
         <GridItem xs={12} sm={12} md={4}>
-          // @ts-ignore
           <Card chart>
-            // @ts-ignore
-            <CardHeader color="warning">
+            <CardHeader color={colors.warning}>
               <ChartistGraph
                 className="ct-chart"
                 data={emailsSubscriptionChart.data}
@@ -211,12 +185,10 @@ export default function RTLPage() {
                 listener={emailsSubscriptionChart.animation}
               />
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <h4 className={classes.cardTitle}>دنبال کننده‌های ایمیلی</h4>
               <p className={classes.cardCategory}>کارایی آخرین کمپین</p>
             </CardBody>
-            // @ts-ignore
             <CardFooter chart>
               <div className={classes.stats}>
                 <AccessTime /> کمپین دو روز پیش ارسال شد
@@ -224,12 +196,9 @@ export default function RTLPage() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={4}>
-          // @ts-ignore
           <Card chart>
-            // @ts-ignore
-            <CardHeader color="danger">
+            <CardHeader color={colors.danger}>
               <ChartistGraph
                 className="ct-chart"
                 data={completedTasksChart.data}
@@ -239,12 +208,10 @@ export default function RTLPage() {
                 listener={completedTasksChart.animation}
               />
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <h4 className={classes.cardTitle}>وظایف انجام شده</h4>
               <p className={classes.cardCategory}>کارایی آخرین کمپین</p>
             </CardBody>
-            // @ts-ignore
             <CardFooter chart>
               <div className={classes.stats}>
                 <AccessTime /> کمپین دو روز پیش ارسال شد
@@ -254,7 +221,6 @@ export default function RTLPage() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={6}>
           <CustomTabs
             title="وظایف:"
@@ -300,12 +266,9 @@ export default function RTLPage() {
             ]}
           />
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={6}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color="warning">
+            <CardHeader color={colors.warning}>
               <h4 className={classes.cardTitleWhite}>آمار کارکنان</h4>
               <p className={classes.cardCategoryWhite}>
                 کارکنان جدید از ۱۵ آبان ۱۳۹۶
@@ -314,7 +277,7 @@ export default function RTLPage() {
             // @ts-ignore
             <CardBody>
               <Table
-                tableHeaderColor="warning"
+                tableHeaderColor={colors.warning}
                 tableHead={["کد", "نام", "حقوق", "استان"]}
                 tableData={[
                   // @ts-ignore
@@ -332,12 +295,9 @@ export default function RTLPage() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={6}>
-          // @ts-ignore
           <Card>
-            // @ts-ignore
-            <CardHeader color="primary">
+            <CardHeader color={colors.primary}>
               <h4 className={classes.cardTitleWhite}>اعلان ها</h4>
               <p className={classes.cardCategoryWhite}>
                 يدويا من قبل أصدقائنا من{" "}
@@ -398,7 +358,6 @@ export default function RTLPage() {
                 <img src={avatar} alt="..." />
               </a>
             </CardAvatar>
-            // @ts-ignore
             <CardBody profile>
               <h6 className={classes.cardCategory}>مدیرعامل / مدیرفنی</h6>
               <h4 className={classes.cardTitle}>خداداد عزیزی</h4>
@@ -410,7 +369,7 @@ export default function RTLPage() {
                 متن‌های آزمایشی و بی‌معنی استفاده می‌کنند ...
               </p>
               // @ts-ignore
-              <Button color="primary" round>
+              <Button color={colors.primary} round>
                 دنبال‌کردن
               </Button>
             </CardBody>

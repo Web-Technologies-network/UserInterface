@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import Grid, { GridJustification } from '@material-ui/core/Grid';
 
 const styles = {
   grid: {
@@ -12,6 +12,7 @@ const styles = {
 const useStyles = makeStyles(styles);
 type GridContainerProp = {
   children: React.ReactNode;
+  justify?: GridJustification;
 };
 export default function GridContainer(props: GridContainerProp) {
   const classes = useStyles();
