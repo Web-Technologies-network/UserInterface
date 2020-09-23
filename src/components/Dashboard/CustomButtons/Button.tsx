@@ -5,7 +5,10 @@ import { colors } from '../../../assets/jss/Colors';
 
 import { createButtonStyles } from '../../../assets/jss/material-dashboard-react/components/buttonStyle';
 
-enum sizes {'sm', 'lg'}
+enum sizes {
+  'sm',
+  'lg',
+}
 export default function RegularButton(props: {
   color: colors;
   round?: boolean;
@@ -20,7 +23,7 @@ export default function RegularButton(props: {
   muiClasses?: object;
   href?: string;
   target?: string;
-  fullWidth?:boolean;
+  fullWidth?: boolean;
   onClick?: (event: any) => void;
 }) {
   const classes = createButtonStyles();

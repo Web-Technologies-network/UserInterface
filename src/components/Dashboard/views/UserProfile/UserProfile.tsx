@@ -8,7 +8,7 @@ import GridContainer from '../../Grid/GridContainer';
 import CustomInput from '../../CustomInput/CustomInput';
 import Button from '../../CustomButtons/Button';
 import { Card } from '../../../common/Card/Card';
-import CardHeader  from '../../Card/CardHeader';
+import CardHeader from '../../Card/CardHeader';
 import { CardAvatar } from '../../Card/CardAvatar';
 import CardBody from '../../Card/CardBody';
 import CardFooter from '../../Card/CardFooter';
@@ -32,12 +32,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '3px',
     textDecoration: 'none',
   },
-  description: {
-  
-  },
-  cardTitle: {
-  
-  },
+  description: {},
+  cardTitle: {},
 }));
 
 export default function UserProfile() {

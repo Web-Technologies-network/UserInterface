@@ -9,7 +9,7 @@ import {
 } from '../../material-dashboard-react';
 import { makeStyles, Theme } from '@material-ui/core';
 // tell typescript the exact type of the keys for the style object
-const styles: {[key: string]:any} = {
+const styles: { [key: string]: any } = {
   cardHeader: {
     padding: '0.75rem 1.25rem',
     marginBottom: '0',
@@ -121,4 +121,4 @@ const styles: {[key: string]:any} = {
     },
   },
 };
-export const createCardHeaderStyle = makeStyles((theme:Theme) => (styles));
+export const createCardHeaderStyle = makeStyles((theme: Theme) => styles);

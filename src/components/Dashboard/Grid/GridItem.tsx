@@ -13,10 +13,10 @@ type GridItemProp = {
   xs: GridSize;
   sm: GridSize;
   md: GridSize;
-}
+};
 export default function GridItem(props: GridItemProp) {
   const classes = useStyles();
-  const { children,xs, sm, md, ...rest } = props;
+  const { children, xs, sm, md, ...rest } = props;
   return (
     <Grid item {...rest} className={classes.grid}>
       {children}

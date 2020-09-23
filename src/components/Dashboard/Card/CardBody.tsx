@@ -13,7 +13,13 @@ import styles from '../../../assets/jss/material-dashboard-react/components/card
 // @ts-ignore
 const useStyles = makeStyles(styles);
 
-export default function CardBody(props: { [x: string]: any; className?: any; children: any; plain?: any; profile?: any }) {
+export default function CardBody(props: {
+  [x: string]: any;
+  className?: any;
+  children: any;
+  plain?: any;
+  profile?: any;
+}) {
   const classes = useStyles();
   const { className, children, plain, profile, ...rest } = props;
   const cardBodyClasses = classNames({

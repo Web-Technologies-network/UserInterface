@@ -11,7 +11,7 @@ import {
   blackColor,
   hexToRgb,
 } from '../../material-dashboard-react';
-const buttonStyle: {[x: string]: any} = {
+const buttonStyle: { [x: string]: any } = {
   button: {
     minHeight: 'auto',
     minWidth: 'auto',
@@ -338,4 +338,4 @@ const buttonStyle: {[x: string]: any} = {
   },
 };
 
-export const createButtonStyles = makeStyles((theme:Theme) => (buttonStyle));
+export const createButtonStyles = makeStyles((theme: Theme) => buttonStyle);
