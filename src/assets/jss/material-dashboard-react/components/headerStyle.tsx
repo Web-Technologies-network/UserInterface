@@ -11,7 +11,7 @@ import {
   grayColor,
 } from '../../material-dashboard-react';
 
-const headerStyle = () => ({
+const headerStyle: { [key: string]: any } = () => ({
   appBar: {
     backgroundColor: 'transparent',
     boxShadow: 'none',

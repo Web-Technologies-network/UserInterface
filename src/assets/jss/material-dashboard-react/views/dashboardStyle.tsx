@@ -1,6 +1,6 @@
 import { successColor, whiteColor, grayColor, hexToRgb } from '../../material-dashboard-react';
 
-const dashboardStyle = {
+const dashboardStyle: { [key: string]: any } = {
   successText: {
     color: successColor[0],
   },

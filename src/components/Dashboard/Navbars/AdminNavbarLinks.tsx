@@ -29,8 +29,7 @@ export default function AdminNavbarLinks() {
   const classes = useStyles();
   const [openNotification, setOpenNotification] = React.useState(null);
   const [openProfile, setOpenProfile] = React.useState(null);
-  // @ts-ignore
-  const handleClickNotification = (event) => {
+  const handleClickNotification = (event: { target: any; currentTarget: React.SetStateAction<null> }) => {
     // @ts-ignore
     if (openNotification && openNotification.contains(event.target)) {
       setOpenNotification(null);
@@ -41,8 +40,7 @@ export default function AdminNavbarLinks() {
   const handleCloseNotification = () => {
     setOpenNotification(null);
   };
-  // @ts-ignore
-  const handleClickProfile = (event) => {
+  const handleClickProfile = (event: { target: any; currentTarget: React.SetStateAction<null> }) => {
     // @ts-ignore
     if (openProfile && openProfile.contains(event.target)) {
       setOpenProfile(null);
@@ -67,12 +65,10 @@ export default function AdminNavbarLinks() {
             },
           }}
         />
-        // @ts-ignore
         <Button color={colors.white} aria-label='edit' justIcon round>
           <Search />
         </Button>
       </div>
-      // @ts-ignore
       <Button
         color={window.innerWidth > 959 ? colors.transparent : colors.white}
         justIcon={window.innerWidth > 959}
@@ -86,7 +82,6 @@ export default function AdminNavbarLinks() {
         </Hidden>
       </Button>
       <div className={classes.manager}>
-        // @ts-ignore
         <Button
           color={window.innerWidth > 959 ? colors.transparent : colors.white}
           justIcon={window.innerWidth > 959}

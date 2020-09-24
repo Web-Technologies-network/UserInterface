@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 // @material-ui/core components
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Input from '@material-ui/core/Input';
@@ -12,8 +12,7 @@ import Check from '@material-ui/icons/Check';
 // core components
 import styles from '../../../assets/jss/material-dashboard-react/components/customInputStyle';
 
-// @ts-ignore
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles((theme: Theme) => styles);
 
 export default function CustomInput(props: {
   formControlProps: any;

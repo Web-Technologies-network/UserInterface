@@ -19,13 +19,11 @@ describe('Danger', () => {
   it('should render children', function () {
     act(() => {
       ReactDOM.render(
-        // @ts-ignore
         <Danger>
           <div>children</div>
         </Danger>,
         container,
       );
-      // @ts-ignore
       const grid = container.querySelector('div');
       expect(grid.textContent).toBe('children');
     });

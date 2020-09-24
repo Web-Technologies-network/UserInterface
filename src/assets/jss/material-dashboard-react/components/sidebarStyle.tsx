@@ -14,9 +14,9 @@ import {
   blackColor,
   hexToRgb,
 } from '../../material-dashboard-react';
+import { Theme } from '@material-ui/core';
 
-// @ts-ignore
-const sidebarStyle = (theme) => ({
+const sidebarStyle = (theme: Theme) => ({
   drawerPaper: {
     border: 'none',
     position: 'fixed',

@@ -15,7 +15,6 @@ import CardHeader from '../Card/CardHeader';
 
 import styles from '../../../assets/jss/material-dashboard-react/components/customTabsStyle';
 
-// @ts-ignore
 const useStyles = makeStyles(styles);
 
 export default function CustomTabs(props: { headerColor: any; plainTabs: any; tabs: any; title: any; rtlActive: any }) {
@@ -30,9 +29,7 @@ export default function CustomTabs(props: { headerColor: any; plainTabs: any; ta
     [classes.cardTitleRTL]: rtlActive,
   });
   return (
-    // @ts-ignore
     <Card plain={plainTabs}>
-      // @ts-ignore
       <CardHeader color={headerColor} plain={plainTabs}>
         {title !== undefined ? <div className={cardTitle}>{title}</div> : null}
         <Tabs
@@ -74,7 +71,6 @@ export default function CustomTabs(props: { headerColor: any; plainTabs: any; ta
           )}
         </Tabs>
       </CardHeader>
-      // @ts-ignore
       <CardBody>
         {tabs.map((prop: { tabContent: React.ReactNode }, key: string | number | undefined) => {
           if (key === value) {

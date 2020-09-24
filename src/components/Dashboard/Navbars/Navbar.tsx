@@ -15,15 +15,26 @@ import RTLNavbarLinks from './RTLNavbarLinks';
 import Button from '../CustomButtons/Button';
 
 import styles from '../../../assets/jss/material-dashboard-react/components/headerStyle';
-
-// @ts-ignore
+import { colors } from '../../../assets/jss/Colors';
+type route = {
+  path: string;
+  name: string;
+  rtlName: any;
+  icon: any;
+  component: any;
+  layout: string;
+};
+type headerProps = {
+  color?: colors;
+  rtlActive?: boolean;
+  handleDrawerToggle: () => void;
+  routes: route[];
+};
 const useStyles = makeStyles(styles);
-// @ts-ignore
-export default function Header(props) {
+export default function Header(props: headerProps) {
   const classes = useStyles();
   function makeBrand() {
     let name;
-    // @ts-ignore
     props.routes.map((prop) => {
       if (window.location.href.indexOf(prop.layout + prop.path) !== -1) {
         name = props.rtlActive ? prop.rtlName : prop.name;
@@ -32,17 +43,16 @@ export default function Header(props) {
     });
     return name;
   }
-  const { color } = props;
+  const { color = '' } = props;
   const appBarClasses = classNames({
-    [' ' + classes[color]]: color,
+    [' ' + classes[color]]: color !== '',
   });
   return (
     <AppBar className={classes.appBar + appBarClasses}>
       <Toolbar className={classes.container}>
         <div className={classes.flex}>
           {/* Here we create navbar brand, based on route name */}
-          // @ts-ignore
-          <Button color='transparent' href='#' className={classes.title}>
+          <Button color={colors.transparent} href='#' className={classes.title}>
             {makeBrand()}
           </Button>
         </div>
@@ -58,10 +68,3 @@ export default function Header(props) {
     </AppBar>
   );
 }
-
-Header.propTypes = {
-  color: PropTypes.oneOf(['primary', 'info', 'success', 'warning', 'danger']),
-  rtlActive: PropTypes.bool,
-  handleDrawerToggle: PropTypes.func,
-  routes: PropTypes.arrayOf(PropTypes.object),
-};

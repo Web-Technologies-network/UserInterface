@@ -10,9 +10,6 @@ import TableCell from '@material-ui/core/TableCell';
 import { createTableClasses } from '../../../assets/jss/material-dashboard-react/components/tableStyle';
 import { colors } from '../../../assets/jss/Colors';
 
-interface StringArray {
-  strings: string[];
-}
 type CustomTableProp = {
   tableHead: string[];
   tableData: string[][];

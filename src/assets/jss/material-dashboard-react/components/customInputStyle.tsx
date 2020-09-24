@@ -1,6 +1,6 @@
 import { primaryColor, dangerColor, successColor, grayColor, defaultFont } from '../../material-dashboard-react';
 
-const customInputStyle = {
+const customInputStyle: { [key: string]: any } = {
   disabled: {
     '&:before': {
       backgroundColor: 'transparent !important',

@@ -2,7 +2,7 @@ import React from 'react';
 // react plugin for creating charts
 import ChartistGraph from 'react-chartist';
 // @material-ui/core
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon';
 // @material-ui/icons
 import Store from '@material-ui/icons/Store';
@@ -34,8 +34,8 @@ import { dailySalesChart, emailsSubscriptionChart, completedTasksChart } from '.
 
 import styles from '../../../../assets/jss/material-dashboard-react/views/dashboardStyle';
 import { colors } from '../../../../assets/jss/Colors';
-// @ts-ignore
-const useStyles = makeStyles(styles);
+
+const useStyles = makeStyles((theme: Theme) => styles);
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -229,13 +229,9 @@ export default function Dashboard() {
                 tableHeaderColor={colors.warning}
                 tableHead={['ID', 'Name', 'Salary', 'Country']}
                 tableData={[
-                  // @ts-ignore
                   ['1', 'Dakota Rice', '$36,738', 'Niger'],
-                  // @ts-ignore
                   ['2', 'Minerva Hooper', '$23,789', 'Curaçao'],
-                  // @ts-ignore
                   ['3', 'Sage Rodriguez', '$56,142', 'Netherlands'],
-                  // @ts-ignore
                   ['4', 'Philip Chaney', '$38,735', 'Korea, South'],
                 ]}
               />
