@@ -1,22 +1,22 @@
 /*eslint-disable*/
-import React from "react";
+import React from 'react';
 // react plugin for creating charts
-import ChartistGraph from "react-chartist";
+import ChartistGraph from 'react-chartist';
 // @material-ui/core
-import { makeStyles } from "@material-ui/core/styles";
-import Icon from "@material-ui/core/Icon";
+import { makeStyles } from '@material-ui/core/styles';
+import Icon from '@material-ui/core/Icon';
 // @material-ui/icons
-import Store from "@material-ui/icons/Store";
-import Warning from "@material-ui/icons/Warning";
-import DateRange from "@material-ui/icons/DateRange";
-import LocalOffer from "@material-ui/icons/LocalOffer";
-import Update from "@material-ui/icons/Update";
-import ArrowUpward from "@material-ui/icons/ArrowUpward";
-import AccessTime from "@material-ui/icons/AccessTime";
-import Accessibility from "@material-ui/icons/Accessibility";
-import BugReport from "@material-ui/icons/BugReport";
-import Code from "@material-ui/icons/Code";
-import Cloud from "@material-ui/icons/Cloud";
+import Store from '@material-ui/icons/Store';
+import Warning from '@material-ui/icons/Warning';
+import DateRange from '@material-ui/icons/DateRange';
+import LocalOffer from '@material-ui/icons/LocalOffer';
+import Update from '@material-ui/icons/Update';
+import ArrowUpward from '@material-ui/icons/ArrowUpward';
+import AccessTime from '@material-ui/icons/AccessTime';
+import Accessibility from '@material-ui/icons/Accessibility';
+import BugReport from '@material-ui/icons/BugReport';
+import Code from '@material-ui/icons/Code';
+import Cloud from '@material-ui/icons/Cloud';
 // core components
 import Button from '../../CustomButtons/Button';
 import GridItem from '../../Grid/GridItem';
@@ -31,18 +31,14 @@ import { CardAvatar } from '../../Card/CardAvatar';
 import CardIcon from '../../Card/CardIcon';
 import CardBody from '../../Card/CardBody';
 import CardFooter from '../../Card/CardFooter';
-import SnackbarContent from "../../Snackbar/SnackbarContent";
+import SnackbarContent from '../../Snackbar/SnackbarContent';
 
-import {
-  dailySalesChart,
-  emailsSubscriptionChart,
-  completedTasksChart
-} from '../../variables/charts';
+import { completedTasksChart, dailySalesChart, emailsSubscriptionChart } from '../../variables/charts';
 
 import styles from '../../../../assets/jss/material-dashboard-react/views/rtlStyle';
 
 import avatar from '.././.././../../assets/img/faces/marc.jpg';
-import { colors } from "../../../../assets/jss/Colors";
+import { colors } from '../../../../assets/jss/Colors';
 
 let bugs = [
   "طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن؟",
@@ -171,7 +167,6 @@ export default function RTLPage() {
             </CardFooter>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={4}>
           <Card chart>
             <CardHeader color={colors.warning}>
@@ -274,7 +269,6 @@ export default function RTLPage() {
                 کارکنان جدید از ۱۵ آبان ۱۳۹۶
               </p>
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <Table
                 tableHeaderColor={colors.warning}
@@ -321,7 +315,6 @@ export default function RTLPage() {
                 .
               </p>
             </CardHeader>
-            // @ts-ignore
             <CardBody>
               <SnackbarContent
                 message={
@@ -329,7 +322,7 @@ export default function RTLPage() {
                 }
                 close
                 rtlActive
-                color="warning"
+                color={colors.warning}
               />
               <SnackbarContent
                 message={
@@ -337,22 +330,19 @@ export default function RTLPage() {
                 }
                 close
                 rtlActive
-                color="primary"
+                color={colors.primary}
               />
               <SnackbarContent
                 message={"این یک اعلان با دکمه بستن و آیکن است"}
                 close
                 rtlActive
-                color="info"
+                color={colors.info}
               />
             </CardBody>
           </Card>
         </GridItem>
-        // @ts-ignore
         <GridItem xs={12} sm={12} md={6}>
-          // @ts-ignore
           <Card profile>
-            // @ts-ignore
             <CardAvatar profile>
               <a href="#pablo" onClick={e => e.preventDefault()}>
                 <img src={avatar} alt="..." />

@@ -13,6 +13,8 @@ type GridItemProp = {
   xs: GridSize;
   sm: GridSize;
   md: GridSize;
+  lg?: GridSize;
+  style?: any;
 };
 export default function GridItem(props: GridItemProp) {
   const classes = useStyles();

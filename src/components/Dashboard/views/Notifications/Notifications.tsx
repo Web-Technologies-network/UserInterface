@@ -1,11 +1,10 @@
 /*eslint-disable*/
-import React from "react";
+import React from 'react';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
 // @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 // @material-ui/icons
-import AddAlert from "@material-ui/icons/AddAlert";
+import AddAlert from '@material-ui/icons/AddAlert';
 // core components
 import GridItem from '../../Grid/GridItem';
 import GridContainer from '../../Grid/GridContainer';
@@ -15,9 +14,17 @@ import Snackbar from '../../Snackbar/Snackbar';
 import { Card } from '../../../common/Card/Card';
 import CardHeader from '../../Card/CardHeader';
 import CardBody from '../../Card/CardBody';
-import { colors } from "../../../../assets/jss/Colors";
+import { colors } from '../../../../assets/jss/Colors';
 
-const styles = {
+enum Places {
+  tl,
+  tc,
+  tr,
+  bl,
+  bc,
+  br,
+}
+const styles: { [key: string]: any} = {
   cardCategoryWhite: {
     "&,& a,& a:hover,& a:focus": {
       color: "rgba(255,255,255,.62)",
@@ -46,7 +53,6 @@ const styles = {
     }
   }
 };
-// @ts-ignore
 const useStyles = makeStyles(styles);
 
 export default function Notifications() {
@@ -61,17 +67,15 @@ export default function Notifications() {
     // Specify how to clean up after this effect:
     return function cleanup() {
       // to stop the warning of calling setState of unmounted component
-      // @ts-ignore
-      var id = window.setTimeout(null, 0);
+      var id = window.setTimeout(()=> {}, 0);
       while (id--) {
         window.clearTimeout(id);
       }
     };
   });
-  // @ts-ignore
-  const showNotification = place => {
+  const showNotification = (place: Places) => {
     switch (place) {
-      case "tl":
+      case Places.tl:
         if (!tl) {
           setTL(true);
           setTimeout(function() {
@@ -79,7 +83,7 @@ export default function Notifications() {
           }, 6000);
         }
         break;
-      case "tc":
+      case Places.tc:
         if (!tc) {
           setTC(true);
           setTimeout(function() {
@@ -87,7 +91,7 @@ export default function Notifications() {
           }, 6000);
         }
         break;
-      case "tr":
+      case Places.tr:
         if (!tr) {
           setTR(true);
           setTimeout(function() {
@@ -95,7 +99,7 @@ export default function Notifications() {
           }, 6000);
         }
         break;
-      case "bl":
+      case Places.bl:
         if (!bl) {
           setBL(true);
           setTimeout(function() {
@@ -103,7 +107,7 @@ export default function Notifications() {
           }, 6000);
         }
         break;
-      case "bc":
+      case Places.bc:
         if (!bc) {
           setBC(true);
           setTimeout(function() {
@@ -111,7 +115,7 @@ export default function Notifications() {
           }, 6000);
         }
         break;
-      case "br":
+      case Places.br:
         if (!br) {
           setBR(true);
           setTimeout(function() {
@@ -124,9 +128,7 @@ export default function Notifications() {
     }
   };
   return (
-   // @ts-ignore
     <Card>
-      // @ts-ignore
       <CardHeader color={colors.primary}>
         <h4 className={classes.cardTitleWhite}>Notifications</h4>
         <p className={classes.cardCategoryWhite}>
@@ -151,10 +153,8 @@ export default function Notifications() {
           .
         </p>
       </CardHeader>
-      // @ts-ignore
       <CardBody>
         <GridContainer>
-          // @ts-ignore
           <GridItem xs={12} sm={12} md={6}>
             <h5>Notifications Style</h5>
             <br />
@@ -176,7 +176,6 @@ export default function Notifications() {
               icon={AddAlert}
             />
           </GridItem>
-          // @ts-ignore
           <GridItem xs={12} sm={12} md={6}>
             <h5>Notifications States</h5>
             <br />
@@ -185,43 +184,41 @@ export default function Notifications() {
                 'INFO - This is a regular notification made with color="info"'
               }
               close
-              color="info"
+              color={colors.info}
             />
             <SnackbarContent
               message={
                 'SUCCESS - This is a regular notification made with color="success"'
               }
               close
-              color="success"
+              color={colors.success}
             />
             <SnackbarContent
               message={
                 'WARNING - This is a regular notification made with color="warning"'
               }
               close
-              color="warning"
+              color={colors.warning}
             />
             <SnackbarContent
               message={
                 'DANGER - This is a regular notification made with color="danger"'
               }
               close
-              color="danger"
+              color={colors.danger}
             />
             <SnackbarContent
               message={
                 'PRIMARY - This is a regular notification made with color="primary"'
               }
               close
-              color="primary"
+              color={colors.primary}
             />
           </GridItem>
         </GridContainer>
         <br />
         <br />
-        // @ts-ignore
         <GridContainer justify="center">
-          // @ts-ignore
           <GridItem xs={12} sm={12} md={6} style={{ textAlign: "center" }}>
             <h5>
               Notifications Places
@@ -230,24 +227,20 @@ export default function Notifications() {
             </h5>
           </GridItem>
         </GridContainer>
-        // @ts-ignore
         <GridContainer justify="center">
-          // @ts-ignore
           <GridItem xs={12} sm={12} md={10} lg={8}>
             <GridContainer>
-              // @ts-ignore
               <GridItem xs={12} sm={12} md={4}>
-                // @ts-ignore
                 <Button
                   fullWidth
                   color={colors.primary}
-                  onClick={() => showNotification("tl")}
+                  onClick={() => showNotification(Places.tl)}
                 >
                   Top Left
                 </Button>
                 <Snackbar
                   place="tl"
-                  color="info"
+                  color={colors.info}
                   icon={AddAlert}
                   message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
                   open={tl}
@@ -255,19 +248,17 @@ export default function Notifications() {
                   close
                 />
               </GridItem>
-              // @ts-ignore
               <GridItem xs={12} sm={12} md={4}>
-                // @ts-ignore
                 <Button
                   fullWidth
                   color={colors.primary}
-                  onClick={() => showNotification("tc")}
+                  onClick={() => showNotification(Places.tc)}
                 >
                   Top Center
                 </Button>
                 <Snackbar
                   place="tc"
-                  color="info"
+                  color={colors.info}
                   icon={AddAlert}
                   message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
                   open={tc}
@@ -275,19 +266,17 @@ export default function Notifications() {
                   close
                 />
               </GridItem>
-              // @ts-ignore
               <GridItem xs={12} sm={12} md={4}>
-                // @ts-ignore
                 <Button
                   fullWidth
                   color={colors.primary}
-                  onClick={() => showNotification("tr")}
+                  onClick={() => showNotification(Places.tr)}
                 >
                   Top Right
                 </Button>
                 <Snackbar
                   place="tr"
-                  color="info"
+                  color={colors.info}
                   icon={AddAlert}
                   message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
                   open={tr}
@@ -298,24 +287,20 @@ export default function Notifications() {
             </GridContainer>
           </GridItem>
         </GridContainer>
-        // @ts-ignore
         <GridContainer justify={"center"}>
-          // @ts-ignore
           <GridItem xs={12} sm={12} md={10} lg={8}>
             <GridContainer>
-              // @ts-ignore
               <GridItem xs={12} sm={12} md={4}>
-                // @ts-ignore
                 <Button
                   fullWidth
                   color={colors.primary}
-                  onClick={() => showNotification("bl")}
+                  onClick={() => showNotification(Places.bl)}
                 >
                   Bottom Left
                 </Button>
                 <Snackbar
                   place="bl"
-                  color="info"
+                  color={colors.info}
                   icon={AddAlert}
                   message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
                   open={bl}
@@ -323,19 +308,17 @@ export default function Notifications() {
                   close
                 />
               </GridItem>
-              // @ts-ignore
               <GridItem xs={12} sm={12} md={4}>
-                // @ts-ignore
                 <Button
                   fullWidth
                   color={colors.primary}
-                  onClick={() => showNotification("bc")}
+                  onClick={() => showNotification(Places.bc)}
                 >
                   Bottom Center
                 </Button>
                 <Snackbar
                   place="bc"
-                  color="info"
+                  color={colors.info}
                   icon={AddAlert}
                   message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
                   open={bc}
@@ -343,19 +326,17 @@ export default function Notifications() {
                   close
                 />
               </GridItem>
-              // @ts-ignore
               <GridItem xs={12} sm={12} md={4}>
-                // @ts-ignore
                 <Button
                   fullWidth
                   color={colors.primary}
-                  onClick={() => showNotification("br")}
+                  onClick={() => showNotification(Places.br)}
                 >
                   Bottom Right
                 </Button>
                 <Snackbar
                   place="br"
-                  color="info"
+                  color={colors.info}
                   icon={AddAlert}
                   message="Welcome to MATERIAL DASHBOARD React - a beautiful freebie for every web developer."
                   open={br}

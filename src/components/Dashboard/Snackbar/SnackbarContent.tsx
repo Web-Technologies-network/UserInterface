@@ -9,14 +9,19 @@ import IconButton from '@material-ui/core/IconButton';
 import Close from '@material-ui/icons/Close';
 // core components
 import styles from '../../../assets/jss/material-dashboard-react/components/snackbarContentStyle';
-// @ts-ignore
+import { colors } from '../../../assets/jss/Colors';
 const useStyles = makeStyles(styles);
-// @ts-ignore
-export default function SnackbarContent(props) {
+type SnackbarContentProps = {
+  message: React.ReactNode;
+  color?: colors;
+  close?: boolean;
+  icon?: any;
+  rtlActive?: boolean;
+};
+export default function SnackbarContent(props: SnackbarContentProps) {
   const classes = useStyles();
-  const { message, color, close, icon, rtlActive } = props;
-  // @ts-ignore
-  let action = [];
+  const { message, color = colors.primary, close, icon, rtlActive } = props;
+  let action: {} | null | undefined = [];
   const messageClasses = classNames({
     [classes.iconMessage]: icon !== undefined,
   });
@@ -40,16 +45,7 @@ export default function SnackbarContent(props) {
         message: classes.message,
         action: classNames({ [classes.actionRTL]: rtlActive }),
       }}
-      // @ts-ignore
       action={action}
     />
   );
 }
-
-SnackbarContent.propTypes = {
-  message: PropTypes.node.isRequired,
-  color: PropTypes.oneOf(['info', 'success', 'warning', 'danger', 'primary']),
-  close: PropTypes.bool,
-  icon: PropTypes.object,
-  rtlActive: PropTypes.bool,
-};
