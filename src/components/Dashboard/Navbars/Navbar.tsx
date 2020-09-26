@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
