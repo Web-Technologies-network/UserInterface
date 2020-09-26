@@ -20,15 +20,12 @@ import Button from '../CustomButtons/Button';
 
 import styles from '../../../assets/jss/material-dashboard-react/components/rtlHeaderLinksStyle';
 import { colors } from '../../../assets/jss/Colors';
-// @ts-ignore
 const useStyles = makeStyles(styles);
 
 export default function RTLNavbarLinks() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(null);
-  // @ts-ignore
-  const handleToggle = (event) => {
-    // @ts-ignore
+  const [open, setOpen] = React.useState<any>(null);
+  const handleToggle = (event: any) => {
     if (open && open.contains(event.target)) {
       setOpen(null);
     } else {
@@ -54,12 +51,10 @@ export default function RTLNavbarLinks() {
             },
           }}
         />
-        // @ts-ignore
         <Button color={colors.white} aria-label='edit' justIcon round>
           <Search />
         </Button>
       </div>
-      // @ts-ignore
       <Button
         color={window.innerWidth > 959 ? colors.transparent : colors.white}
         justIcon={window.innerWidth > 959}
@@ -73,7 +68,6 @@ export default function RTLNavbarLinks() {
         </Hidden>
       </Button>
       <div className={classes.manager}>
-        // @ts-ignore
         <Button
           color={window.innerWidth > 959 ? colors.transparent : colors.white}
           justIcon={window.innerWidth > 959}
@@ -101,8 +95,7 @@ export default function RTLNavbarLinks() {
           {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
-              // @ts-ignore
-              id='menu-list-grow'
+              // id='menu-list-grow'
               style={{
                 transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
               }}
@@ -132,7 +125,6 @@ export default function RTLNavbarLinks() {
           )}
         </Poppers>
       </div>
-      // @ts-ignore
       <Button
         color={window.innerWidth > 959 ? colors.transparent : colors.white}
         justIcon={window.innerWidth > 959}
