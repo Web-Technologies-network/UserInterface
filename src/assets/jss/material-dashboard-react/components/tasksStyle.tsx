@@ -1,7 +1,7 @@
 import { defaultFont, primaryColor, dangerColor, grayColor } from '../../material-dashboard-react';
 import tooltipStyle from '../../material-dashboard-react/tooltipStyle';
 import checkboxAdnRadioStyle from '../../material-dashboard-react/checkboxAdnRadioStyle';
-const tasksStyle = {
+const tasksStyle: { [key: string]: any } = {
   ...tooltipStyle,
   ...checkboxAdnRadioStyle,
   table: {

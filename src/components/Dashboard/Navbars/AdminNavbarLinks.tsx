@@ -22,15 +22,13 @@ import Button from '../CustomButtons/Button';
 import styles from '../../../assets/jss/material-dashboard-react/components/headerLinksStyle';
 import { colors } from '../../../assets/jss/Colors';
 
-// @ts-ignore
 const useStyles = makeStyles(styles);
 
 export default function AdminNavbarLinks() {
   const classes = useStyles();
-  const [openNotification, setOpenNotification] = React.useState(null);
-  const [openProfile, setOpenProfile] = React.useState(null);
+  const [openNotification, setOpenNotification] = React.useState<any>(null);
+  const [openProfile, setOpenProfile] = React.useState<any>(null);
   const handleClickNotification = (event: { target: any; currentTarget: React.SetStateAction<null> }) => {
-    // @ts-ignore
     if (openNotification && openNotification.contains(event.target)) {
       setOpenNotification(null);
     } else {
@@ -40,8 +38,7 @@ export default function AdminNavbarLinks() {
   const handleCloseNotification = () => {
     setOpenNotification(null);
   };
-  const handleClickProfile = (event: { target: any; currentTarget: React.SetStateAction<null> }) => {
-    // @ts-ignore
+  const handleClickProfile = (event: any) => {
     if (openProfile && openProfile.contains(event.target)) {
       setOpenProfile(null);
     } else {
@@ -109,8 +106,7 @@ export default function AdminNavbarLinks() {
           {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
-              // @ts-ignore
-              id='notification-menu-list-grow'
+              // className={'notification-menu-list-grow'}
               style={{
                 transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
               }}
@@ -165,8 +161,7 @@ export default function AdminNavbarLinks() {
           {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
-              // @ts-ignore
-              id='profile-menu-list-grow'
+              // id='profile-menu-list-grow'
               style={{
                 transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
               }}

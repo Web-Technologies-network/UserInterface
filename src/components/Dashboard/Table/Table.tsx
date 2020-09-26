@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 // @material-ui/core components
 import Table from '@material-ui/core/Table';
 import TableHead from '@material-ui/core/TableHead';
@@ -13,11 +12,11 @@ import { colors } from '../../../assets/jss/Colors';
 type CustomTableProp = {
   tableHead: string[];
   tableData: string[][];
-  tableHeaderColor: colors;
+  tableHeaderColor?: colors;
 };
 export default function CustomTable(props: CustomTableProp) {
   const classes = createTableClasses();
-  const { tableHead, tableData, tableHeaderColor } = props;
+  const { tableHead, tableData, tableHeaderColor = colors.gray } = props;
   return (
     <div className={classes.tableResponsive}>
       <Table className={classes.table}>
@@ -38,7 +37,6 @@ export default function CustomTable(props: CustomTableProp) {
           {tableData.map((prop, key) => {
             return (
               <TableRow key={key} className={classes.tableBodyRow}>
-                // @ts-ignore
                 {prop.map((prop: React.ReactNode, key: string | number | undefined) => {
                   return (
                     <TableCell className={classes.tableCell} key={key}>
@@ -54,12 +52,3 @@ export default function CustomTable(props: CustomTableProp) {
     </div>
   );
 }
-
-CustomTable.defaultProps = {
-  tableHeaderColor: 'gray',
-};
-
-CustomTable.propTypes = {
-  tableHead: PropTypes.arrayOf(PropTypes.string),
-  tableData: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
-};

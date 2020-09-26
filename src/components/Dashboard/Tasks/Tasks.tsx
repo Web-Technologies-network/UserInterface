@@ -16,14 +16,17 @@ import Close from '@material-ui/icons/Close';
 import Check from '@material-ui/icons/Check';
 // core components
 import styles from '../../../assets/jss/material-dashboard-react/components/tasksStyle';
-// @ts-ignore
 const useStyles = makeStyles(styles);
-// @ts-ignore
-export default function Tasks(props) {
+type TasksProps = {
+  tasksIndexes: number[];
+  tasks: React.ReactNode[];
+  rtlActive?: boolean;
+  checkedIndexes: Array<any>;
+};
+export default function Tasks(props: TasksProps) {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([...props.checkedIndexes]);
-  // @ts-ignore
-  const handleToggle = (value) => {
+  const handleToggle = (value: any) => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
     if (currentIndex === -1) {
@@ -40,7 +43,6 @@ export default function Tasks(props) {
   return (
     <Table className={classes.table}>
       <TableBody>
-        // @ts-ignore
         {tasksIndexes.map((value) => (
           <TableRow key={value} className={classes.tableRow}>
             <TableCell className={tableCellClasses}>
@@ -75,10 +77,3 @@ export default function Tasks(props) {
     </Table>
   );
 }
-
-Tasks.propTypes = {
-  tasksIndexes: PropTypes.arrayOf(PropTypes.number),
-  tasks: PropTypes.arrayOf(PropTypes.node),
-  rtlActive: PropTypes.bool,
-  checkedIndexes: PropTypes.array,
-};

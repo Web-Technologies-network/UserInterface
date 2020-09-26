@@ -2,7 +2,9 @@ import { defaultFont, dangerColor, whiteColor } from '../../material-dashboard-r
 
 import dropdownStyle from '../../material-dashboard-react/dropdownStyle';
 
-const headerLinksStyle = (theme: { breakpoints: { down: (arg0: string) => any; up: (arg0: string) => any } }) => ({
+const headerLinksStyle: { [key: string]: any } = (theme: {
+  breakpoints: { down: (arg0: string) => any; up: (arg0: string) => any };
+}) => ({
   ...dropdownStyle(theme),
   search: {
     '& > div': {
