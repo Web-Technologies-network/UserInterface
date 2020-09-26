@@ -125,8 +125,7 @@ export default function Dashboard() {
                 className='ct-chart'
                 data={dailySalesChart.data}
                 type='Line'
-                // @ts-ignore
-                options={dailySalesChart.options}
+                // options={dailySalesChart.options}
                 listener={dailySalesChart.animation}
               />
             </CardHeader>
@@ -153,8 +152,7 @@ export default function Dashboard() {
                 className='ct-chart'
                 data={emailsSubscriptionChart.data}
                 type='Bar'
-                // @ts-ignore
-                options={emailsSubscriptionChart.options}
+                // options={emailsSubscriptionChart.options}
                 responsiveOptions={emailsSubscriptionChart.responsiveOptions}
                 listener={emailsSubscriptionChart.animation}
               />
@@ -177,8 +175,7 @@ export default function Dashboard() {
                 className='ct-chart'
                 data={completedTasksChart.data}
                 type='Line'
-                // @ts-ignore
-                options={completedTasksChart.options}
+                // options={completedTasksChart.options}
                 listener={completedTasksChart.animation}
               />
             </CardHeader>
@@ -198,7 +195,7 @@ export default function Dashboard() {
         <GridItem xs={12} sm={12} md={6}>
           <CustomTabs
             title='Tasks:'
-            headerColor='primary'
+            headerColor={colors.primary}
             tabs={[
               {
                 tabName: 'Bugs',

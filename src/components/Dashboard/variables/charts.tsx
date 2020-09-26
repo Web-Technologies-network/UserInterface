@@ -35,8 +35,7 @@ export const dailySalesChart = {
   },
   // for animation
   animation: {
-    // @ts-ignore
-    draw: function (data) {
+    draw: function (data: any) {
       if (data.type === 'line' || data.type === 'area') {
         data.element.animate({
           d: {
@@ -90,8 +89,7 @@ export const emailsSubscriptionChart = {
       {
         seriesBarDistance: 5,
         axisX: {
-          // @ts-ignore
-          labelInterpolationFnc: function (value) {
+          labelInterpolationFnc: function (value: any) {
             return value[0];
           },
         },
@@ -99,8 +97,7 @@ export const emailsSubscriptionChart = {
     ],
   ],
   animation: {
-    // @ts-ignore
-    draw: function (data) {
+    draw: function (data: any) {
       if (data.type === 'bar') {
         data.element.animate({
           opacity: {
@@ -139,8 +136,7 @@ export const completedTasksChart = {
     },
   },
   animation: {
-    // @ts-ignore
-    draw: function (data) {
+    draw: function (data: any) {
       if (data.type === 'line' || data.type === 'area') {
         data.element.animate({
           d: {
