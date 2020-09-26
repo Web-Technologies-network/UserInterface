@@ -219,7 +219,7 @@ export default function RTLPage() {
         <GridItem xs={12} sm={12} md={6}>
           <CustomTabs
             title="وظایف:"
-            headerColor="primary"
+            headerColor={colors.primary}
             rtlActive
             tabs={[
               {
