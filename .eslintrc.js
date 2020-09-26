@@ -39,5 +39,5 @@ module.exports = {
     'react/prop-types': OFF,
     'react/jsx-max-props-per-line': WARN, //this rule conflict with prettier need a solution ?
   },
-  ignorePatterns: ['serviceWorker.ts']
+  ignorePatterns: ['serviceWorker.ts', 'src/components/Dashboard/views/Maps/Maps.tsx'],
 };
