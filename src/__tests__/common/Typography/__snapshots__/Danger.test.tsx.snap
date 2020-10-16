@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Danger should render the same 1`] = `
+<div
+  className="MuiGrid-root makeStyles-defaultFontStyle-1 makeStyles-dangerText-11"
+>
+  <div>
+    test children
+  </div>
+</div>
+`;

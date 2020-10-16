@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Info should render the same 1`] = `
+<div
+  className="MuiGrid-root makeStyles-defaultFontStyle-1 makeStyles-infoText-8"
+>
+  <div>
+    test children
+  </div>
+</div>
+`;

@@ -1,3 +1,15 @@
+[![CirlcleCi](https://circleci.com/gh/Web-Technologies-network/UserInterface.svg?style=svg)](https://circleci.com/gh/Web-Technologies-network/UserInterface)
+## About the project
+This project started as a tech network project and basically the main goal was learning and applying new 
+technologies. As we proceed a real need for a skilled person resume come on the way. So we decide to use 
+this boiler plate for that purpose. We find it very difficult to list all skills on paper. Normalising the 
+data structure to list those skills with minimum repetition is challenging and almost impossible to 
+reflect all your skills in few papers and look nice at the same time. 
+So emerging from this need we decide to create a web based project that:
+ - Create queryable resume that ease the task for recruiters to quickly find what they are looking for
+ - Demo our ability as a team  we can add real value to the business 
+ - Learning new technologies and cutting new grounds when possible
+  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

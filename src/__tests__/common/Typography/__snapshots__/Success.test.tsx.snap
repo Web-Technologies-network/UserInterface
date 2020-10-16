@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Success should render the same 1`] = `
+<div
+  className="MuiGrid-root makeStyles-defaultFontStyle-1 makeStyles-successText-9"
+>
+  <div>
+    test children
+  </div>
+</div>
+`;
