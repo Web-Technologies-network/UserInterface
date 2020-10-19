@@ -7,9 +7,11 @@ export const actionHandlerIds = {
   [DELETE_PROFILE]: (state: string[], payload: string) => state,
 };
 
+type byIdState = { [key: string]: Profile };
+
 export const actionHandlerByIds = {
-  [ADD_PROFILE]: (state: string[], payload: Profile) =>
+  [ADD_PROFILE]: (state: byIdState, payload: Profile) =>
     includes(keys(state), payload.id) ? state : merge({}, state, { [payload.id]: payload }),
-  [UPDATE_PROFILE]: (state: string[], payload: Profile) => state,
-  [DELETE_PROFILE]: (state: string[], payload: Profile) => state,
+  [UPDATE_PROFILE]: (state: byIdState, payload: Profile) => state,
+  [DELETE_PROFILE]: (state: byIdState, payload: Profile) => state,
 };
