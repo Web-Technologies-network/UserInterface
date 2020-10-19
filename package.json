@@ -57,10 +57,12 @@
     "@types/lodash": "^4.14.161",
     "@types/react-router-dom": "^5.1.5",
     "@types/react-test-renderer": "^16.9.3",
+    "@types/redux-logger": "^3.0.8",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "prettier": "^2.0.5",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "redux-logger": "^3.0.6"
   }
 }
