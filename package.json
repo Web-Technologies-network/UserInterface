@@ -63,6 +63,7 @@
     "eslint-plugin-react": "^7.20.3",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1",
+    "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6"
   }
 }
