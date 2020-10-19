@@ -8,6 +8,14 @@ const OFF = 0; const WARN = 1; const ERROR = 2;
  * @type {{}}
  */
 module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+  },
+  globals: {
+    Atomics: 'readonly', // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics
+    SharedArrayBuffer: 'readonly', //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+  },
   // Specifying the parser that will allow eslint to lint typescript code
   parser: '@typescript-eslint/parser',
   // parsing option configuration object
@@ -25,6 +33,11 @@ module.exports = {
       version: 'detect' // automatically detect react version to use in the rules
     }
   },
+  plugins: [
+      'react',
+      '@typescript-eslint',
+      'prettier'
+  ],
   // we need to start with a base configuration and then tailor that by writing our own rules
   extends: [
     'plugin:react/recommended', // use recommended rules from plugin eslint react
