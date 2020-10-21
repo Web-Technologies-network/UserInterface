@@ -34,7 +34,7 @@ import NotificationsPage from './views/Notifications/Notifications';
 import UpgradeToPro from './views/UpgradeToPro/UpgradeToPro';
 // core components/views for RTL layout
 import RTLPage from './views/RTLPage/RTLPage';
-import { Profile } from '../../containers/Profile';
+import { ProfileContainer } from '../../containers/Profile';
 
 const dashboardRoutes = [
   {
@@ -50,7 +50,7 @@ const dashboardRoutes = [
     name: 'User Profile',
     rtlName: 'ملف تعريفي للمستخدم',
     icon: Person,
-    component: Profile,
+    component: ProfileContainer,
     layout: '/admin',
   },
   {
