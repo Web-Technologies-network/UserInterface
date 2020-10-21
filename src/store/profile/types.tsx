@@ -1,7 +1,14 @@
 // Model typescript types
 export interface Profile {
   id: string;
-  name: string;
+  Company: string;
+  Username: string;
+  FirstName: string;
+  LastName: string;
+  City: string;
+  Country: string;
+  PostalCode: string;
+  AboutMe: string;
 }
 
 // action types
