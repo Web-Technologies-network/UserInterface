@@ -2,13 +2,12 @@ import React, { Fragment, useState } from 'react';
 import UserProfile from '../../components/Dashboard/views/UserProfile/UserProfile';
 import { RootState } from '../../store';
 import { v4 } from 'uuid';
-import { connect, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
 
 import { Profile, addProfile } from '../../store/profile';
 
-const ProfileView = () => {
+const ProfileView = ({ addProfile }: { addProfile: (profile: any) => void }) => {
   const [profile, setProfile] = useState<Profile>();
-  const dispatch = useDispatch();
   const onChange = (profile: Profile) => {
     setProfile(profile);
   };
@@ -17,7 +16,7 @@ const ProfileView = () => {
       <UserProfile
         onChange={onChange}
         profile={profile}
-        onSubmit={(profile: Profile) => dispatch(addProfile({ ...profile, id: v4() }))}
+        onSubmit={(profile: Profile) => addProfile({ ...profile, id: v4() })}
       />
     </Fragment>
   );
