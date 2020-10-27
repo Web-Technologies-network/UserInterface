@@ -8,8 +8,8 @@ import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles(styles);
 
-export function AdminNavbarDashboardButton(): React.ReactElement {
-  const classes = useStyles();
+export function AdminNavbarDashboardButton({ classes }: { classes: any }): React.ReactElement {
+  // const classes = useStyles();
 
   return (
     <Button

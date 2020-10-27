@@ -66,7 +66,7 @@ export default function AdminNavbarLinks() {
           <Search />
         </Button>
       </div>
-      <AdminNavbarDashboardButton />
+      <AdminNavbarDashboardButton classes={classes} />
       <div className={classes.manager}>
         <Button
           color={window.innerWidth > 959 ? colors.transparent : colors.white}
