@@ -6,10 +6,10 @@ import styles from '../../../assets/jss/material-dashboard-react/components/head
 import Dashboard from '@material-ui/icons/Dashboard';
 import Hidden from '@material-ui/core/Hidden';
 
-const useStyles = makeStyles(styles);
+// const useStyles = makeStyles(styles);
 
-export function AdminNavbarDashboardButton({ classes }: { classes: any }): React.ReactElement {
-  // const classes = useStyles();
+export const AdminNavbarDashboardButton: React.FC<{ useStyles: () => any }> = ({ useStyles }) => {
+  const classes = useStyles();
 
   return (
     <Button
@@ -25,4 +25,4 @@ export function AdminNavbarDashboardButton({ classes }: { classes: any }): React
       </Hidden>
     </Button>
   );
-}
+};
