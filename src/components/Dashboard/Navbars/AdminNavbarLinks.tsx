@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 // @material-ui/core components
-import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import Grow from '@material-ui/core/Grow';
@@ -13,19 +12,17 @@ import Divider from '@material-ui/core/Divider';
 // @material-ui/icons
 import Person from '@material-ui/icons/Person';
 import Notifications from '@material-ui/icons/Notifications';
-import Dashboard from '@material-ui/icons/Dashboard';
 import Search from '@material-ui/icons/Search';
 // core components
 import CustomInput from '../CustomInput/CustomInput';
 import Button from '../CustomButtons/Button';
+import { AdminNavbarDashboardButton } from './AdminNavbarDashboardButton';
 
-import styles from '../../../assets/jss/material-dashboard-react/components/headerLinksStyle';
+import { useHeaderLinksStyle } from '../../../assets/jss/material-dashboard-react/components/headerLinksStyle';
 import { colors } from '../../../assets/jss/Colors';
 
-const useStyles = makeStyles(styles);
-
 export default function AdminNavbarLinks() {
-  const classes = useStyles();
+  const classes = useHeaderLinksStyle();
   const [openNotification, setOpenNotification] = React.useState<any>(null);
   const [openProfile, setOpenProfile] = React.useState<any>(null);
   const handleClickNotification = (event: { target: any; currentTarget: React.SetStateAction<null> }) => {
@@ -66,18 +63,7 @@ export default function AdminNavbarLinks() {
           <Search />
         </Button>
       </div>
-      <Button
-        color={window.innerWidth > 959 ? colors.transparent : colors.white}
-        justIcon={window.innerWidth > 959}
-        simple={!(window.innerWidth > 959)}
-        aria-label='Dashboard'
-        className={classes.buttonLink}
-      >
-        <Dashboard className={classes.icons} />
-        <Hidden mdUp implementation='css'>
-          <p className={classes.linkText}>Dashboard</p>
-        </Hidden>
-      </Button>
+      <AdminNavbarDashboardButton />
       <div className={classes.manager}>
         <Button
           color={window.innerWidth > 959 ? colors.transparent : colors.white}
