@@ -1,15 +1,12 @@
 import React from 'react';
 import Button from '../CustomButtons/Button';
 import { colors } from '../../../assets/jss/Colors';
-import { makeStyles } from '@material-ui/core/styles';
-import styles from '../../../assets/jss/material-dashboard-react/components/headerLinksStyle';
+import { useHeaderLinksStyle } from '../../../assets/jss/material-dashboard-react/components/headerLinksStyle';
 import Dashboard from '@material-ui/icons/Dashboard';
 import Hidden from '@material-ui/core/Hidden';
 
-// const useStyles = makeStyles(styles);
-
-export const AdminNavbarDashboardButton: React.FC<{ useStyles: () => any }> = ({ useStyles }) => {
-  const classes = useStyles();
+export const AdminNavbarDashboardButton: React.FC = () => {
+  const classes = useHeaderLinksStyle();
 
   return (
     <Button

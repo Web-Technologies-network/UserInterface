@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 // @material-ui/core components
-import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import Grow from '@material-ui/core/Grow';
@@ -19,13 +18,11 @@ import CustomInput from '../CustomInput/CustomInput';
 import Button from '../CustomButtons/Button';
 import { AdminNavbarDashboardButton } from './AdminNavbarDashboardButton';
 
-import styles from '../../../assets/jss/material-dashboard-react/components/headerLinksStyle';
+import { useHeaderLinksStyle } from '../../../assets/jss/material-dashboard-react/components/headerLinksStyle';
 import { colors } from '../../../assets/jss/Colors';
 
-const useStyles = makeStyles(styles);
-
 export default function AdminNavbarLinks() {
-  const classes = useStyles();
+  const classes = useHeaderLinksStyle();
   const [openNotification, setOpenNotification] = React.useState<any>(null);
   const [openProfile, setOpenProfile] = React.useState<any>(null);
   const handleClickNotification = (event: { target: any; currentTarget: React.SetStateAction<null> }) => {
@@ -66,7 +63,7 @@ export default function AdminNavbarLinks() {
           <Search />
         </Button>
       </div>
-      <AdminNavbarDashboardButton useStyles={useStyles} />
+      <AdminNavbarDashboardButton />
       <div className={classes.manager}>
         <Button
           color={window.innerWidth > 959 ? colors.transparent : colors.white}

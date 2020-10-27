@@ -1,5 +1,5 @@
 import { defaultFont, dangerColor, whiteColor } from '../../material-dashboard-react';
-
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import dropdownStyle from '../../material-dashboard-react/dropdownStyle';
 
 const headerLinksStyle: { [key: string]: any } = (theme: {
@@ -108,4 +108,4 @@ const headerLinksStyle: { [key: string]: any } = (theme: {
   },
 });
 
-export default headerLinksStyle;
+export const useHeaderLinksStyle = makeStyles(headerLinksStyle);
