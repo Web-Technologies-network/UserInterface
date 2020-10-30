@@ -4,7 +4,7 @@ import { RootState } from '../../store';
 import { v4 } from 'uuid';
 import { connect } from 'react-redux';
 
-import { Profile, addProfile } from '../../store/profile';
+import { Profile, addProfile } from '../../store/Orm/profile';
 
 const ProfileView = ({ addProfile }: { addProfile: (profile: any) => void }) => {
   const [profile, setProfile] = useState<Profile>();

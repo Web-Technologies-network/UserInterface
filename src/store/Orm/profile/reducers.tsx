@@ -1,5 +1,5 @@
-import { Profile, ProfileActionTypes } from './types';
-import { actionHandlerByIds, actionHandlerIds } from './actionHandlers';
+import { Profile, ProfileActionTypes } from '../profile/types';
+import { actionHandlerByIds, actionHandlerIds } from '../profile/actionHandlers';
 
 export type byIdState = { [key: string]: Profile };
 

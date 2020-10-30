@@ -1,6 +1,6 @@
-import { ADD_PROFILE, DELETE_PROFILE, Profile, UPDATE_PROFILE } from './types';
+import { ADD_PROFILE, DELETE_PROFILE, Profile, UPDATE_PROFILE } from '../profile/types';
 import { merge, keys, includes } from 'lodash';
-import { byIdState } from './reducers';
+import { byIdState } from '../profile/reducers';
 
 export const actionHandlerIds = {
   [ADD_PROFILE]: (state: string[], payload: string) => (state.includes(payload) ? state : [...state, payload]),

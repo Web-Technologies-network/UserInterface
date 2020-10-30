@@ -14,7 +14,7 @@ import CardBody from '../../Card/CardBody';
 import CardFooter from '../../Card/CardFooter';
 import { colors } from '../../../../assets/jss/Colors';
 import avatar from '../../../../assets/img/faces/marc.jpg';
-import { Profile } from '../../../../store/profile/types';
+import { Profile } from '../../../../store/Orm/profile/types';
 
 const useStyles = makeStyles((theme) => ({
   cardCategoryWhite: {
