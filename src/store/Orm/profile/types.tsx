@@ -3,6 +3,7 @@ export interface Profile {
   id: string;
   Company: string;
   Username: string;
+  EmailAddress: string;
   FirstName: string;
   LastName: string;
   City: string;

@@ -1,29 +1,28 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import UserProfile from '../../components/Dashboard/views/UserProfile/UserProfile';
 import { RootState } from '../../store';
 import { v4 } from 'uuid';
-import { connect } from 'react-redux';
+import { connect, ConnectedProps } from 'react-redux';
 
 import { Profile, addProfile } from '../../store/Orm/profile';
 
-const ProfileView = ({ addProfile }: { addProfile: (profile: any) => void }) => {
+const ProfileView = ({ addProfile }: connectedProps) => {
   const [profile, setProfile] = useState<Profile>();
   const onChange = (profile: Profile) => {
     setProfile(profile);
   };
   return (
-    <Fragment>
-      <UserProfile
-        onChange={onChange}
-        profile={profile}
-        onSubmit={(profile: Profile) => addProfile({ ...profile, id: v4() })}
-      />
-    </Fragment>
+    <UserProfile
+      onChange={onChange}
+      profile={profile}
+      onSubmit={(profile: Profile) => addProfile({ ...profile, id: v4() })}
+    />
   );
 };
 
 const mapStateToProps = (state: RootState) => ({});
 
 const mapDispatchToProps = { addProfile };
-
-export const ProfileContainer = connect(mapStateToProps, mapDispatchToProps)(ProfileView);
+const connector = connect(mapStateToProps, mapDispatchToProps);
+type connectedProps = ConnectedProps<typeof connector>;
+export const ProfileContainer = connector(ProfileView);

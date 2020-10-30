@@ -15,6 +15,7 @@ import CardFooter from '../../Card/CardFooter';
 import { colors } from '../../../../assets/jss/Colors';
 import avatar from '../../../../assets/img/faces/marc.jpg';
 import { Profile } from '../../../../store/Orm/profile/types';
+import { on } from 'cluster';
 
 const useStyles = makeStyles((theme) => ({
   cardCategoryWhite: {
@@ -88,6 +89,8 @@ export default function UserProfile({
                     formControlProps={{
                       fullWidth: true,
                     }}
+                    value={profile?.EmailAddress}
+                    onChange={(event) => onChange({ ...profile, EmailAddress: event.target.value })}
                   />
                 </GridItem>
               </GridContainer>
@@ -134,6 +137,8 @@ export default function UserProfile({
                     formControlProps={{
                       fullWidth: true,
                     }}
+                    value={profile?.Country}
+                    onChange={(event) => onChange({ ...profile, Country: event.target.value })}
                   />
                 </GridItem>
                 <GridItem xs={12} sm={12} md={4}>
