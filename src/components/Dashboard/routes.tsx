@@ -26,7 +26,6 @@ import Unarchive from '@material-ui/icons/Unarchive';
 import Language from '@material-ui/icons/Language';
 // core components/views for Admin layout
 import DashboardPage from './views/Dashboard/Dashboard';
-import UserProfile from './views/UserProfile/UserProfile';
 import TableList from './views/TableList/TableList';
 import Typography from './views/Typography/Typography';
 import Icons from './views/Icons/Icons';
@@ -35,6 +34,7 @@ import NotificationsPage from './views/Notifications/Notifications';
 import UpgradeToPro from './views/UpgradeToPro/UpgradeToPro';
 // core components/views for RTL layout
 import RTLPage from './views/RTLPage/RTLPage';
+import { ProfileContainer } from '../../containers/Profile';
 
 const dashboardRoutes = [
   {
@@ -50,7 +50,7 @@ const dashboardRoutes = [
     name: 'User Profile',
     rtlName: 'ملف تعريفي للمستخدم',
     icon: Person,
-    component: UserProfile,
+    component: ProfileContainer,
     layout: '/admin',
   },
   {
